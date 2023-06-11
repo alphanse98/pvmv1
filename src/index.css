@@ -8,9 +8,9 @@
   font-family: 'Rubik', sans-serif;
 }
 /* container responsive */
-@media (min-width: 1800px) {
+@media (min-width: 1930px) {
   .headerContainer{
-    width: 80%;
+    width: 90%;
     margin: 0px auto;
   }
 }
@@ -132,10 +132,10 @@ display: flex;}
   }
 }
 
-@media (min-width: 800px) {
+
+@media (min-width: 950px) {
   .HeadarBtns{
     flex-direction: row;
-    /* justify-content: space-evenly; */
   }
   .HeaderEnquriryBtn{
     margin-top: 0px;
