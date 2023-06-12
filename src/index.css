@@ -264,10 +264,110 @@ display: flex;}
     padding-bottom: 7rem;
   }
   .serviceBox{
-    width: 23vh;
-    height: 15vh;
+    /* width: 23vh;
+    height: 15vh; */
+    width: 30vh;
+    height: 20vh;
   }
   .serviceBoxIcon{
     width: 6vh;
+  }
+ }
+ /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
+.serviceFields{
+  padding: 0px 30px;
+  margin-bottom: 20px;
+}
+ .serviceFieldsHeading{
+display: flex;
+justify-content: center;
+padding-top: 2rem;
+font-size: 1.2rem;
+font-weight: 500;
+margin-bottom: 20px;
+}
+.serviceFieldsParagraph{
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  letter-spacing: 0.05em;
+  font-size: 0.8rem;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+}
+.serviceFieldsImgBOx{
+  padding: 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  /* width: 500px; */
+}
+.serviceFieldsImgs{
+  width: 150px;
+  /* width: 100%; */
+  border-radius: 10px;
+}
+.serviceFieldsImgFlexOne, .serviceFieldsImgFlexTwo{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.serviceFieldsImgFlexTwo{
+  padding-top: 50px;
+}
+.btnCetnre{
+  display: flex;
+margin: 0px auto;
+margin-top: 20px;
+}
+@media (min-width: 550px) {
+  .serviceFieldsImgs{
+    width: 15rem;
+  }
+  .serviceFieldsParagraph{
+    font-size: 1rem;
+  }
+  
+}
+ @media (min-width: 800px) {
+  .serviceFieldsFlex{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+  }
+  .serviceFields{
+    width: 50%;
+  }
+  .serviceFieldsImgBOx{
+    width: 50%;
+    /* margin-top: 3rem; */
+  }
+  .serviceFieldsImgs{
+    width: 15rem;
+  }
+  .serviceFieldsImgs{
+    width: 17vw;
+  }
+  .serviceFieldsHeading{
+    font-size: 1.6rem;
+
+  }
+  .serviceFieldsParagraph{
+    /* font-size: 1.1rem; */
+    padding-left: 30px;  
+
+  }
+  .serviceFieldsImgFlexTwo{
+    padding-top:10rem;
+
+  }
+ }
+ @media (min-width: 1300px) {
+  .serviceFieldsParagraph{
+    font-size: 1.2rem;
+    line-height: 40px;
+  }
+  .serviceFieldsParagraph{
+    margin-top: 50px;
   }
  }
