@@ -296,6 +296,7 @@ margin-bottom: 20px;
 }
 .serviceFieldsImgBOx{
   padding: 0px 30px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -306,6 +307,8 @@ margin-bottom: 20px;
   width: 150px;
   /* width: 100%; */
   border-radius: 10px;
+  /* box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15); */
+
 }
 .serviceFieldsImgFlexOne, .serviceFieldsImgFlexTwo{
   display: flex;
@@ -320,6 +323,7 @@ margin-bottom: 20px;
 margin: 0px auto;
 margin-top: 20px;
 }
+
 @media (min-width: 550px) {
   .serviceFieldsImgs{
     width: 15rem;
@@ -335,6 +339,11 @@ margin-top: 20px;
     flex-direction: row;
     padding-bottom: 3rem;
   }
+  .serviceFieldsOdd{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
   .serviceFields{
     width: 50%;
   }
@@ -355,7 +364,10 @@ margin-top: 20px;
   .serviceFieldsParagraph{
     /* font-size: 1.1rem; */
     padding-left: 30px;  
-
+  }
+  .oddParagraph{
+    /* font-size: 1.1rem; */
+    padding-right: 30px;  
   }
   .serviceFieldsImgFlexTwo{
     padding-top:10rem;
@@ -370,4 +382,19 @@ margin-top: 20px;
   .serviceFieldsParagraph{
     margin-top: 50px;
   }
+  .serviceFieldsOdd{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .serviceFieldsImgBOx{
+    padding-bottom: 0px;
+  }
+  .serviceFieldsImgs{
+    width: 15vw;
+  }
  }
+ .serviceFieldsOdd{
+  background-color: #F8F8F8;
+
+ }
+ 
