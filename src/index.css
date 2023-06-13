@@ -397,6 +397,38 @@ margin-top: 20px;
  .serviceFieldsOdd{
   background-color: #F8F8F8;
  }
+   /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
+/*  WalkThrough*/
+.WalkThroughSection{
+  padding: 30px;
+}
+.WalkThroughVedio{
+  width: 90wv;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  margin:20px 0px;
+  padding: 
+  40px 0px;
+}
+@media (min-width: 600px) {
+  .WalkThroughVedio{
+    height: 400px;
+  }
+  .WalkThroughParagrap{
+    width: 70%;
+    margin: 0px auto;
+  }
+}
+@media (min-width: 1200px) {
+  .WalkThroughVedio{
+    width: 80%;
+    height: 600px;
+    margin: 0px auto;
+
+  }
+}
+
 
   /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
 /* footer section */
@@ -463,7 +495,6 @@ margin-top: 10px;
 }
 .footerIcon{
   width: 35px;
-  padding-left: 30px;
 
 }
 .footerNumber{
@@ -477,12 +508,15 @@ margin-top: 10px;
 .footerSocialMediaIcon{
   display: flex;
  width: 30px;
- padding-left: 30px;
 
 }
 
  
 @media (min-width: 500px) {
+  .footerSocialMediaIcon, .footerIcon{
+    padding-left: 30px;
+
+  }
   .FooterSendQuote {
     width: 400px;
   }
