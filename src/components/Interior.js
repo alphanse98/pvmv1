@@ -1,5 +1,8 @@
-import plan from '../assets/floor plan1.jpeg'
-// Interior
+import interior1 from '../assets/interior1.jpeg'
+import interior2 from '../assets/interior2.jpeg'
+import interior3 from '../assets/interior3.jpeg'
+import interior4 from '../assets/interior4.jpg'
+
 
 function Interior() {
     return (
@@ -23,12 +26,12 @@ function Interior() {
           </div>
           <div className="serviceFieldsImgBOx">
               <div className='serviceFieldsImgFlexOne'>
-                  <img src={plan} className='serviceFieldsImgs' alt=''></img>
-                  <img src={plan} className='serviceFieldsImgs' alt=''></img>
+                  <img src={interior1} className='serviceFieldsImgs' alt=''></img>
+                  <img src={interior2} className='serviceFieldsImgs' alt=''></img>
               </div>
               <div className='serviceFieldsImgFlexTwo'>
-                  <img src={plan} className='serviceFieldsImgs' alt=''></img>
-                  <img src={plan} className='serviceFieldsImgs' alt=''></img>
+                  <img src={interior3} className='serviceFieldsImgs' alt=''></img>
+                  <img src={interior4} className='serviceFieldsImgs' alt=''></img>
               </div>
           </div>
         </section>

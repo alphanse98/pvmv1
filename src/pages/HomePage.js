@@ -14,8 +14,8 @@ function HomePage() {
         <Services/> 
         <Plan/>
         <Elevation/>
-        <FloorPlan/>
         <Interior/>
+        <FloorPlan/>
         <WalkThrough/>
         <FooterSection/>
       </div>

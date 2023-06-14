@@ -1,4 +1,7 @@
-import plan from '../assets/floor plan1.jpeg'
+import floorPLan1 from '../assets/floorplan1.jpeg'
+import floorPLan2 from '../assets/floorplan2.jpeg'
+import floorPLan3 from '../assets/floorplan3.jpeg'
+import floorPLan4 from '../assets/floorplan4.jpeg'
 
 
 function FloorPlan() {
@@ -24,12 +27,12 @@ function FloorPlan() {
         </div>
         <div className="serviceFieldsImgBOx">
             <div className='serviceFieldsImgFlexOne'>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
+                <img src={floorPLan1} className='serviceFieldsImgs' alt=''></img>
+                <img src={floorPLan2} className='serviceFieldsImgs' alt=''></img>
             </div>
             <div className='serviceFieldsImgFlexTwo'>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
+                <img src={floorPLan3} className='serviceFieldsImgs' alt=''></img>
+                <img src={floorPLan4} className='serviceFieldsImgs' alt=''></img>
             </div>
         </div>
       </section>

@@ -1,4 +1,7 @@
-import plan from '../assets/floor plan1.jpeg'
+import elevation1 from '../assets/elevation1.jpeg'
+import elevation2 from '../assets/elevation2.jpeg'
+import elevation3 from '../assets/elevation3.jpeg'
+import elevation4 from '../assets/elevation4.jpeg'
 
 
 function Elevation() {
@@ -23,12 +26,12 @@ function Elevation() {
         </div>
         <div className="serviceFieldsImgBOx">
             <div className='serviceFieldsImgFlexOne'>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
+                <img src={elevation1} className='serviceFieldsImgs' alt=''></img>
+                <img src={elevation2} className='serviceFieldsImgs' alt=''></img>
             </div>
             <div className='serviceFieldsImgFlexTwo'>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
-                <img src={plan} className='serviceFieldsImgs' alt=''></img>
+                <img src={elevation3} className='serviceFieldsImgs' alt=''></img>
+                <img src={elevation4} className='serviceFieldsImgs' alt=''></img>
             </div>
         </div>
       </section>
