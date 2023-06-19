@@ -184,10 +184,35 @@ display: flex;}
 }
 
 .HeaderTexBox{
-  /* background-color: green; */
   width: 70%;
   margin: 0px auto;
 }
+ /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
+ /* gallery section */
+
+ @keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+ .img-slide{
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 20s slide infinite linear;
+  display: inline-block;
+ }
+.img-slide img{
+  width: 150px;
+  height: 150px;
+}
+
+
+
+
+
  /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
  /* service section */
  .serviceSection{

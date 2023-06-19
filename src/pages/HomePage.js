@@ -6,16 +6,18 @@ import Interior from "../components/Interior";
 import FloorPlan from "../components/FoorPlan";
 import FooterSection from "../components/FooterSection";
 import WalkThrough from "../components/WalkThrough";
+import Gallery from "../components/Gallery" 
 // import FileUploader from "../components/FileUploader";
 function HomePage() {
     return (
-      <div className="App">
+      <div>
         <Header/>
+        <Gallery/>
         <Services/> 
         <Plan/>
         <Elevation/>
-        <Interior/>
         <FloorPlan/>
+        <Interior/>
         <WalkThrough/>
         <FooterSection/>
       </div>
