@@ -8,24 +8,24 @@ function Services() {
             <hi className="serviceHeading fontFamily">Services</hi> 
             <div className="serviceBoxs">
                 <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon'></img>
+                    <img src={plan} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>2D Plan</p>
                 </div>
                 <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon'></img>
+                    <img src={plan} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>Elevation</p>
                 </div>
                 <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon'></img>
-                    <p className='sevixeBoxP '>3D floor PLan</p>
+                    <img src={plan} className='serviceBoxIcon' alt=''></img>
+                    <p className='sevixeBoxP '>Interior</p>
                 </div>
                 <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon'></img>
-                    <p className='sevixeBoxP '>2D Plan</p>
+                    <img src={plan} className='serviceBoxIcon' alt=''></img>
+                    <p className='sevixeBoxP '>3D Plan</p>
                 </div>
                 <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon'></img>
-                    <p className='sevixeBoxP '>2D Plan</p>
+                    <img src={plan} className='serviceBoxIcon' alt=''></img>
+                    <p className='sevixeBoxP '>Walk Trough</p>
                 </div>
             </div>
 

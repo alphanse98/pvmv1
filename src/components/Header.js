@@ -27,7 +27,7 @@ function Header() {
     </div>
 
     <div className='HeaderBoxTwo'>
-        <img src={background} className='HeaderImg'></img>
+        <img src={background} className='HeaderImg' alt=''></img>
     </div>
 
    </header></div>
