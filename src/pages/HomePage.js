@@ -7,10 +7,13 @@ import FloorPlan from "../components/FoorPlan";
 import FooterSection from "../components/FooterSection";
 import WalkThrough from "../components/WalkThrough";
 import Gallery from "../components/Gallery" 
+import FileUploadComponent from "../components/FileUploadComponent";
+import Upload from "../components/Upload";
 // import FileUploader from "../components/FileUploader";
 function HomePage() {
     return (
       <div>
+        <Upload/>
         <Header/>
         <Gallery/>
         <Services/> 
