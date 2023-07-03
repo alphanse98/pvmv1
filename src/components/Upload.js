@@ -14,8 +14,8 @@ const Upload = () => {
     const config = {
         bucketName: "planmyspace2dplans",
         region: "ap-south-1",
-        accessKeyId: "AKIA5DRSJQDFSHKE5MVX",
-        secretAccessKey: "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",
+        accessKeyId: "AKIA5DRSJQDF6IDAUF3M",
+        secretAccessKey: "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",
     }
 
     const handleFileInput = (e) => {

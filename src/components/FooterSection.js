@@ -4,13 +4,9 @@
  import pin from '../assets/Group 1874.svg'
  import youtube from '../assets/Group 1875.svg'
  import fb from '../assets/Group 1871.svg'
-
  import { Formik } from 'formik'
  import * as Yup from 'yup';
  
-
-
-
 function FooterSection() {
 
   const uservalidation = Yup.object().shape({

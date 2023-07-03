@@ -15,6 +15,38 @@
     margin: 0px auto;
   }
 }
+ /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
+.popupicon{
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  width: 4rem;
+  cursor: pointer;
+}
+.fromActive{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(9, 9, 9, 0.8);
+  backdrop-filter: blur(5px);
+}
+.formBox{
+  width: 80%;
+  height: 500px;
+  background-color: white;
+  margin: 0 auto;
+}
+@media (min-width: 500px) {
+  .popupicon{
+    width: 5rem;
+    right: 3rem;
+    bottom: 50px;
+
+  }
+}
+
 .navBar{
   display: flex;
   justify-content: space-evenly;
@@ -262,6 +294,7 @@ display: flex;}
  /* service section */
  .serviceSection{
   background-color: #F8F8F8;
+  /* background-color: #E4E9F2; */
   width: 100%;
   padding-bottom: 30px;
 
@@ -471,7 +504,7 @@ margin-top: 20px;
   }
  }
  .serviceFieldsOdd{
-  background-color: #F8F8F8;
+  background-color: #E4E9F2;
  }
    /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
 /*  WalkThrough*/
