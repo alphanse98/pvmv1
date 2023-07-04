@@ -6,28 +6,34 @@
  import fb from '../assets/Group 1871.svg'
  import { Formik } from 'formik'
  import * as Yup from 'yup';
+import { useState } from 'react'
+import PostApi from './PostApi'
  
 function FooterSection() {
+  const [formData, setFormData] = useState()
+  console.log(formData)
+
 
   const uservalidation = Yup.object().shape({
     name: Yup.string().required('Name is required'),
-    phone: Yup.string()
+    mobile: Yup.string()
     .min(10, 'Phone number must be at least 10 characters')
     .max(10, 'Phone number must be at most 10 characters')
     .required('Phone number is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
+    Description: Yup.string(),
+
   });
 
-  const userData = {name:"",phone:"",email:""}
+  const userData = {name:"",mobile:"",email:"",Description:""}
 
   return (
     <footer>
     <Formik
     initialValues = {userData}
     validationSchema={uservalidation}
-    onSubmit = {(param)=>{console.log(param)}}
+    onSubmit = {(param)=>{setFormData(param)}}
     >
-
     {(
       {errors, touched,values,setFieldValue,submitForm}) => (
       <div className="headerContainer">
@@ -35,16 +41,19 @@ function FooterSection() {
           <div className="FooterSendQuote">
             <h1 className="FooterHeadding fontFamily">Send Us a Quote!</h1>
 
-            <input placeholder="Name" className="FooterInp" value={values.name} onChange={(e)=>setFieldValue("name",e.target.value)}></input>
+            <input placeholder="Name" className="FooterInp" type='text' value={values.name} onChange={(e)=>setFieldValue("name",e.target.value)}></input>
             <p className='errorMsg fontFamily'>{errors.name || touched.name  } </p>
-            <input placeholder="Phone Number" type="number" className="FooterInp" value={values.phone} onChange={(e)=>setFieldValue("phone",e.target.value)}></input>
-            <p className='errorMsg fontFamily'>{errors.phone || touched.phone} </p>
-            <input placeholder="Email" className="FooterInp" value={values.email} onChange={(e)=>setFieldValue("email",e.target.value)}></input>
+            <input placeholder="Phone Number" type="number" className="FooterInp" value={values.mobile} onChange={(e)=>setFieldValue("mobile",e.target.value)}></input>
+            <p className='errorMsg fontFamily'>{errors.mobile || touched.mobile} </p>
+            <input placeholder="Email" className="FooterInp" type='Email' value={values.email} onChange={(e)=>setFieldValue("email",e.target.value)}></input>
             <p className='errorMsg fontFamily'>{errors.email || touched.email} </p>
 
             <textarea
               placeholder="Description"
               className="FooterInp"
+              type='text'
+              value={values.Description}
+              onChange={(e)=>setFieldValue("Description",e.target.value)}
             ></textarea>
 
             <button className="FooterBtn"  onClick={submitForm}>Submit</button>
@@ -78,6 +87,7 @@ function FooterSection() {
       </div>
       )}
       </Formik>
+      <PostApi formData={formData} />
     </footer>
   );
 }

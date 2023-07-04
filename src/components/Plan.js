@@ -9,16 +9,7 @@ function Plan() {
         <h1 className="serviceFieldsHeading fontFamily">2D plan</h1>
 
           <p className="serviceFieldsParagraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            libero ante, semper a lacus non, vulputate cursus mauris. Lorem
-            ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Aliquam libero ante, semper a lacus non, vulputate
-            cursus mauris. Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit. Aliquam libero ante, semper a
-            lacus non, vulputate cursus mauris. Lorem ipsum dolor sit amet Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero
-            ante, semper a lacus non, vulputate cursus mauris. Lorem ipsum dolor
-            sit amet
+          The 2D plan depicts the fundamental layout of a property, facilitating efficient space planning to maximize functionality and make the best use of the available space. Our team will meticulously design a 2D plan, meticulously aligning all relevant structures, adhering to Vastu principles, and incorporating elements from nature. Ensuring precise representation of proportions and sizes is crucial, particularly in areas where congestion may be a concern.
           </p>
           <button className='HeaderDownloadBtn btnCetnre'>Viwe More</button>
         </div>
