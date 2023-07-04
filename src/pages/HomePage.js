@@ -24,7 +24,6 @@ function HomePage() {
         <WalkThrough/>
         <FooterSection/>
         <PopPupForm/>
-
       </div>
     );
   }

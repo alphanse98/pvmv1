@@ -1,6 +1,7 @@
 import background from '../assets/Group 304.png'
 
 function Header() {
+  
   return (
     <div className='headerContainer'>
    <header>
@@ -29,7 +30,6 @@ function Header() {
     <div className='HeaderBoxTwo'>
         <img src={background} className='HeaderImg' alt=''></img>
     </div>
-
    </header></div>
   );
 }

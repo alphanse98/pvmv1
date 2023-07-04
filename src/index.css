@@ -31,21 +31,56 @@
   z-index: 5;
   background-color: rgba(9, 9, 9, 0.8);
   backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
 }
 .formBox{
   width: 80%;
-  height: 500px;
-  background-color: white;
-  margin: 0 auto;
+  /* height: 500px; */
+  padding-bottom: 25px;
+  background-color: #F8F8F8;
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  border-radius: 10px;
+
+}
+.formInpit{
+  width: 80%;
+  height: 25px;
+  margin-bottom: 15px;
+}
+.formInpit::placeholder {
+  /* color: white; */
+  font-family: 'Montserrat', sans-serif;
+  font-size: .9rem;
+  letter-spacing: 0.05em;
+  padding: 5px;
 }
 @media (min-width: 500px) {
   .popupicon{
     width: 5rem;
     right: 3rem;
     bottom: 50px;
-
+  }
+  .formBox{
+    width: 450px;
   }
 }
+@media (min-width: 750px) {
+  .formBox{
+    width: 700px;
+    padding-bottom: 50px;
+
+  }
+  .formInpit{
+    width: 500px;
+    height: 35px;
+    margin-bottom: 15px;
+  }
+}
+
 
 .navBar{
   display: flex;
@@ -143,7 +178,7 @@ cursor: pointer;
 .HeaderBoxTwo{
 display: flex;}
 .HeaderImg{
-  width: 100vw;
+  width: 100%;
   /* padding-bottom: 3rem; */
 
 }
