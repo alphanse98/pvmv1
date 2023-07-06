@@ -4,24 +4,20 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import PostApi from "./PostApi";
 import { useDispatch, useSelector } from "react-redux";
+import closeIcon from "../assets/Close.svg";
 import { fromActiveAction } from "../Redux/Slice";
 
-
-
-
 const PopPupForm = () => {
-  // const [fromActive, setFromActive] = useState(false);
+
   const fromActive = useSelector((state) => state.fromActiveStore.fromActive);
-  const dispatch = useDispatch()
-
-
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState();
 
   const uservalidation = Yup.object().shape({
     name: Yup.string().required("Name is required"),
     mobile: Yup.string()
-      .min(10, "Phone number must be at least 10 characters")
-      .max(10, "Phone number must be at most 10 characters")
+      .min(10, " must be at least 10 characters")
+      .max(10, " most 10 characters")
       .required("Phone number is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
     Description: Yup.string(),
@@ -42,6 +38,7 @@ const PopPupForm = () => {
       {fromActive && (
         <div className="fromActive">
           <div className="formBox">
+            <img src={closeIcon} className="closeIcon" onClick={() => dispatch(fromActiveAction(false))}></img>
             <p className="serviceHeading fontFamily">Contact Now !</p>
             <Formik
               initialValues={userData}
@@ -100,6 +97,7 @@ const PopPupForm = () => {
               )}
             </Formik>
             <PostApi formData={formData} setFormData={setFormData} />
+            
           </div>
         </div>
       )}
