@@ -1,6 +1,21 @@
 import background from '../assets/Group 304.png'
+import { useDispatch, useSelector } from "react-redux";
+import { fromActiveAction } from "../Redux/Slice";
+
 
 function Header() {
+
+    let fromActive = useSelector((state) => state.fromActiveStore.fromActive);
+
+    console.log(fromActive,'state')
+
+    const dispatch = useDispatch()
+
+    const EnquriryBtn = ()=>{
+        dispatch(fromActiveAction(true));
+        console.log(fromActive,'state')
+    }
+
   
   return (
     <div className='headerContainer'>
@@ -22,7 +37,7 @@ function Header() {
             <h3 className="HeaderHeadingThree ">Get your model plan Rs 1</h3>
             <div className="HeadarBtns">
             <button className="HeaderDownloadBtn">Download Free Plan</button>
-            <button className="HeaderEnquriryBtn">Make Enquriry</button>
+            <button className="HeaderEnquriryBtn" onClick={()=>EnquriryBtn()}>Make Enquriry</button>
             </div>
         </div>
     </div>

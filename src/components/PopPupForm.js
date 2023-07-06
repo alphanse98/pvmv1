@@ -3,9 +3,18 @@ import poppupicon from "../assets/popupicon.svg";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import PostApi from "./PostApi";
+import { useDispatch, useSelector } from "react-redux";
+import { fromActiveAction } from "../Redux/Slice";
+
+
+
 
 const PopPupForm = () => {
-  const [fromActive, setFromActive] = useState(false);
+  // const [fromActive, setFromActive] = useState(false);
+  const fromActive = useSelector((state) => state.fromActiveStore.fromActive);
+  const dispatch = useDispatch()
+
+
   const [formData, setFormData] = useState();
 
   const uservalidation = Yup.object().shape({
@@ -22,11 +31,11 @@ const PopPupForm = () => {
 
   return (
     <div>
-      {/* poppupicon */}
+      {/* poppup icon */}
       <img
         src={poppupicon}
         className="popupicon"
-        onClick={() => setFromActive(true)}
+        onClick={() => dispatch(fromActiveAction(true))}
         alt="im"
       ></img>
       {/* form popup */}
@@ -90,7 +99,7 @@ const PopPupForm = () => {
                 </>
               )}
             </Formik>
-            <PostApi formData={formData} setFromActive = {setFromActive}/>
+            <PostApi formData={formData} setFormData={setFormData} />
           </div>
         </div>
       )}
