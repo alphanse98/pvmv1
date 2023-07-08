@@ -2,15 +2,19 @@
  import insta from '../assets/Group 1872.svg'
  import whatsapp from '../assets/Group 1873.svg'
  import pin from '../assets/Group 1874.svg'
- import youtube from '../assets/Group 1875.svg'
+ import youtube from '../assets/walkthroughIcon.svg'
  import fb from '../assets/Group 1871.svg'
  import { Formik } from 'formik'
  import * as Yup from 'yup';
 import { useState } from 'react'
 import PostApi from './PostApi'
+import { BarLoader } from 'react-spinners';
+
  
 function FooterSection() {
   const [formData, setFormData] = useState()
+  const [loader, setLOader] = useState(false);
+
   console.log(formData)
 
 
@@ -27,12 +31,20 @@ function FooterSection() {
 
   const userData = {name:"",mobile:"",email:"",Description:""}
 
+  const handleSubmit = (param, { resetForm }) => {
+    // Form submission logic...
+    setFormData(param)
+    setLOader(true)
+    // Reset the form fields
+    resetForm();
+  };
+
   return (
     <footer>
     <Formik
     initialValues = {userData}
     validationSchema={uservalidation}
-    onSubmit = {(param)=>{setFormData(param)}}
+    onSubmit={handleSubmit}
     >
     {(
       {errors, touched,values,setFieldValue,submitForm}) => (
@@ -56,11 +68,12 @@ function FooterSection() {
               onChange={(e)=>setFieldValue("Description",e.target.value)}
             ></textarea>
 
-            <button className="FooterBtn"  onClick={submitForm}>Submit</button>
+            {loader? <div className='FooterBtn FooterLoading'><BarLoader color="#FFFFFF" /> </div>:<button className="FooterBtn"  onClick={submitForm}>Submit</button>}
           </div>
-          
-          <div className="FooterAbout">
-          <h1 className="FooterAboutHeading FooterHeadding fontFamily">About Us</h1>
+          {/* <BarLoader color="#FFFFFF" />  */}
+         
+          <div className="FooterAbout" >
+          <h1 className="FooterAboutHeading FooterHeadding fontFamily" id="About">About Us</h1>
           <p className="serviceFieldsParagraph FooterAboutParagraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
             libero ante, semper a lacus non, vulputate cursus mauris. Lorem
@@ -87,7 +100,7 @@ function FooterSection() {
       </div>
       )}
       </Formik>
-      <PostApi formData={formData} />
+      <PostApi formData={formData} setFormData={setFormData} setLOader = {setLOader} />
     </footer>
   );
 }

@@ -6,12 +6,15 @@ import PostApi from "./PostApi";
 import { useDispatch, useSelector } from "react-redux";
 import closeIcon from "../assets/Close.svg";
 import { fromActiveAction } from "../Redux/Slice";
+import { BarLoader } from 'react-spinners';
+
 
 const PopPupForm = () => {
 
   const fromActive = useSelector((state) => state.fromActiveStore.fromActive);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState();
+  const [loader, setLOader] = useState(false);
 
   const uservalidation = Yup.object().shape({
     name: Yup.string().required("Name is required"),
@@ -38,13 +41,14 @@ const PopPupForm = () => {
       {fromActive && (
         <div className="fromActive">
           <div className="formBox">
-            <img src={closeIcon} className="closeIcon" onClick={() => dispatch(fromActiveAction(false))}></img>
+           { !loader && <img src={closeIcon} className="closeIcon" onClick={() => dispatch(fromActiveAction(false))}></img>}
             <p className="serviceHeading fontFamily">Contact Now !</p>
             <Formik
               initialValues={userData}
               validationSchema={uservalidation}
               onSubmit={(param) => {
                 setFormData(param);
+                setLOader(true)
               }}
             >
               {({ errors, touched, values, setFieldValue, submitForm }) => (
@@ -90,13 +94,14 @@ const PopPupForm = () => {
                     }
                   ></textarea>
 
+                  {loader? <BarLoader color="#269CDD" className="HeaderDownloadBtn "/> :
                   <button className="HeaderDownloadBtn " onClick={submitForm}>
-                    Submit
-                  </button>
+                  Submit
+                  </button> }  
                 </>
               )}
             </Formik>
-            <PostApi formData={formData} setFormData={setFormData} />
+            <PostApi formData={formData} setFormData={setFormData} setLOader = {setLOader} />
             
           </div>
         </div>

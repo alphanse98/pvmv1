@@ -1,34 +1,36 @@
-import plan from '../assets/plan.png'
+import plan from '../assets/mdi_floor-plan.svg'
+import elevation from '../assets/ElevationIcon.svg'
+import Interior from '../assets/interiorIcon.svg'
+import WalkTrough from '../assets/ph_video.svg'
 
 
 function Services() {
     return (
       <div className="headerContainer">
         <section className="serviceSection">
-            <hi className="serviceHeading fontFamily">Services</hi> 
+            <hi className="serviceHeading fontFamily" id="Services">Services</hi> 
             <div className="serviceBoxs">
-                <div className="serviceBox">
+                <a className="serviceBox" href="#plan">
                     <img src={plan} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>2D Plan</p>
-                </div>
-                <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon' alt=''></img>
-                    <p className='sevixeBoxP '>Elevation</p>
-                </div>
-                <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon' alt=''></img>
+                </a>
+                <a className="serviceBox" href="#Elevation">
+                    <img src={elevation} className='serviceBoxIcon' alt=''></img>
+                    <p className='sevixeBoxP ' >Elevation</p>
+                </a>
+                <a className="serviceBox" href="#Interior">
+                    <img src={Interior} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>Interior</p>
-                </div>
-                <div className="serviceBox">
+                </a>
+                <a className="serviceBox" href="#3Dplan">
                     <img src={plan} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>3D Plan</p>
-                </div>
-                <div className="serviceBox">
-                    <img src={plan} className='serviceBoxIcon' alt=''></img>
+                </a>
+                <a className="serviceBox" href='#WalkTrough'>
+                    <img src={WalkTrough} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>Walk Trough</p>
-                </div>
+                </a>
             </div>
-
         </section>
       </div>
     );

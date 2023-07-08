@@ -5,18 +5,19 @@ import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { fromActiveAction } from "../Redux/Slice";
 
-const PostApi = ({ formData, setFormData }) => {
+const PostApi = ({ formData, setFormData, setLOader }) => {
   const dispatch = useDispatch();
 
   // response is ok then close the popup using setFromActive
   // and clear form data and show toasting and close loading
   const getResponse = (param) => {
-    console.log(param, "response");
     dispatch(fromActiveAction(false));
     toast.success("done", {
       position: "top-right",
     });
     setFormData("");
+    setLOader(false)
+    console.log(formData , "formData response")
   };
 
   // call handleClick for api post
@@ -36,6 +37,7 @@ const PostApi = ({ formData, setFormData }) => {
       });
       dispatch(fromActiveAction(false));
       setFormData("");
+      setLOader(false)
     }
   };
 

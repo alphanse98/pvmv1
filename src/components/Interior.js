@@ -9,7 +9,7 @@ function Interior() {
       <div className="headerContainer">
         <section className="serviceFieldsFlex serviceFieldsOdd">
           <div className="serviceFields">
-          <h1 className="serviceFieldsHeading fontFamily">Interior</h1>
+          <h1 className="serviceFieldsHeading fontFamily" id="Interior">Interior</h1>
             <p className="serviceFieldsParagraph oddParagraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               libero ante, semper a lacus non, vulputate cursus mauris. Lorem

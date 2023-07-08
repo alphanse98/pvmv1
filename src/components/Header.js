@@ -11,11 +11,7 @@ function Header() {
 
     const dispatch = useDispatch()
 
-    const EnquriryBtn = ()=>{
-        dispatch(fromActiveAction(true));
-        console.log(fromActive,'state')
-    }
-
+  
   
   return (
     <div className='headerContainer'>
@@ -24,10 +20,10 @@ function Header() {
    <div className='HeaderBoxOne'>
    <nav>
         <ul className='navBar'>
-            <li><a href="default.asp" className='fontFamily'>Home</a></li>
-            <li><a href="news.asp" className='fontFamily'>Services</a></li>
-            <li><a href="contact.asp" className='fontFamily'>Galary</a></li>
-            <li><a href="about.asp" className='fontFamily'>About</a></li>
+            <li><a href="" className='fontFamily'>Home</a></li>
+            <li><a href="#Services" className='fontFamily'>Services</a></li>
+            <li><a href="#Gallery" className='fontFamily'>Gallery</a></li>
+            <li><a href="#About" className='fontFamily'>About</a></li>
         </ul>   
     </nav>
         <div className='HeaderTexBox'>
@@ -37,7 +33,7 @@ function Header() {
             <h3 className="HeaderHeadingThree ">Get your model plan Rs 1</h3>
             <div className="HeadarBtns">
             <button className="HeaderDownloadBtn">Download Free Plan</button>
-            <button className="HeaderEnquriryBtn" onClick={()=>EnquriryBtn()}>Make Enquriry</button>
+            <button className="HeaderEnquriryBtn" onClick={()=>dispatch(fromActiveAction(true))}>Make Enquriry</button>
             </div>
         </div>
     </div>

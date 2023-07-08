@@ -9,7 +9,7 @@ function FloorPlan() {
     <div className="headerContainer">
       <section className="serviceFieldsFlex">
         <div className="serviceFields">
-        <h1 className="serviceFieldsHeading fontFamily">3D Floor Plan</h1>
+        <h1 className="serviceFieldsHeading fontFamily" id="3Dplan">3D Floor Plan</h1>
 
           <p className="serviceFieldsParagraph">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam

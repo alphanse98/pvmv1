@@ -4,7 +4,7 @@ function WalkThrough() {
   return (
     <div className="headerContainer">
       <section className="WalkThroughSection">
-      <h1 className="serviceFieldsHeading fontFamily">Walk Trough</h1>
+      <h1 className="serviceFieldsHeading fontFamily" id="WalkTrough">Walk Trough</h1>
       <p className="serviceFieldsParagraph WalkThroughParagrap">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
               libero ante, semper a lacus non, vulputate cursus mauris. Lorem

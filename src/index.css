@@ -15,6 +15,9 @@
     margin: 0px auto;
   }
 }
+html{
+  scroll-behavior: smooth;
+}
  /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
 .popupicon{
   position: fixed;
@@ -98,6 +101,8 @@
     height: 80px;
   }
 }
+
+dc
 
 
 .navBar{
@@ -376,7 +381,7 @@ display: flex;}
   border-radius: 10px;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-
+  text-decoration: none;
 
  }
  .sevixeBoxP{
@@ -641,6 +646,9 @@ margin-top: 20px;
   font-weight: 500;
   font-size: 14px;
   cursor: pointer;
+}
+.FooterLoading{
+background-color: #269CDD;
 }
 .FooterAboutParagraph{
   color: white;
