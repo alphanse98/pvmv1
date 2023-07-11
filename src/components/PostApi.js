@@ -44,7 +44,7 @@ const PostApi = ({ formData, setFormData, setLOader }) => {
   //call handleClick baced on the formData state uptade
   useEffect(() => {
     if (formData) handleClick();
-  }, [formData]);
+  }, [formData,]);
 
   return (
     <>

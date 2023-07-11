@@ -102,7 +102,6 @@ html{
   }
 }
 
-dc
 
 
 .navBar{
@@ -124,6 +123,12 @@ dc
   }
   .navBar a:hover{
     color:#269CDD;
+  }
+
+  @media (max-width: 600px) {
+    .navBar{
+      display: none;
+    }
   }
 
 

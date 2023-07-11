@@ -41,7 +41,7 @@ const PopPupForm = () => {
       {fromActive && (
         <div className="fromActive">
           <div className="formBox">
-           { !loader && <img src={closeIcon} className="closeIcon" onClick={() => dispatch(fromActiveAction(false))}></img>}
+           { !loader && <img src={closeIcon} className="closeIcon" onClick={() => dispatch(fromActiveAction(false))} alt=""></img>}
             <p className="serviceHeading fontFamily">Contact Now !</p>
             <Formik
               initialValues={userData}

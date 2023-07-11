@@ -14,6 +14,7 @@ import PopPupForm from "../components/PopPupForm";
 function HomePage() {
     return (
       <div>
+        {/* <Upload/> */}
         <Header/>
         <Gallery/>
         <Services/> 

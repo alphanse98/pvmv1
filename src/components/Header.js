@@ -1,18 +1,12 @@
 import background from '../assets/Group 304.png'
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, } from "react-redux";
 import { fromActiveAction } from "../Redux/Slice";
 
 
 function Header() {
 
-    let fromActive = useSelector((state) => state.fromActiveStore.fromActive);
-
-    console.log(fromActive,'state')
-
     const dispatch = useDispatch()
-
-  
-  
+ 
   return (
     <div className='headerContainer'>
    <header>
@@ -20,7 +14,7 @@ function Header() {
    <div className='HeaderBoxOne'>
    <nav>
         <ul className='navBar'>
-            <li><a href="" className='fontFamily'>Home</a></li>
+            <li><a href="/" className='fontFamily'>Home</a></li>
             <li><a href="#Services" className='fontFamily'>Services</a></li>
             <li><a href="#Gallery" className='fontFamily'>Gallery</a></li>
             <li><a href="#About" className='fontFamily'>About</a></li>
