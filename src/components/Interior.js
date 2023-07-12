@@ -2,9 +2,12 @@ import interior1 from '../assets/interior1.jpeg'
 import interior2 from '../assets/interior2.jpeg'
 import interior3 from '../assets/interior3.jpeg'
 import interior4 from '../assets/interior4.jpg'
+import { useNavigate } from "react-router-dom";
+
 
 
 function Interior() {
+  const navigation = useNavigate()
     return (
       <div className="headerContainer">
         <section className="serviceFieldsFlex serviceFieldsOdd">
@@ -22,7 +25,7 @@ function Interior() {
               ante, semper a lacus non, vulputate cursus mauris. Lorem ipsum dolor
               sit amet
             </p>
-            <button className='HeaderDownloadBtn btnCetnre'>Viwe More</button>
+            <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
           </div>
           <div className="serviceFieldsImgBOx">
               <div className='serviceFieldsImgFlexOne'>

@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 
 
 function WalkThrough() {
+  const navigation = useNavigate()
+
   return (
     <div className="headerContainer">
       <section className="WalkThroughSection">
@@ -17,7 +20,7 @@ function WalkThrough() {
               ante, semper a lacus non, vulputate cursus mauris. Lorem ipsum dolor
               sit amet
             </p>
-            <button className='HeaderDownloadBtn btnCetnre'>Viwe More</button>
+            <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
             <div className="WalkThroughVedio">
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/QR2I1tSbWc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>

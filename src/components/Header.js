@@ -1,11 +1,14 @@
 import background from '../assets/Group 304.png'
 import { useDispatch, } from "react-redux";
 import { fromActiveAction } from "../Redux/Slice";
+import { useNavigate } from "react-router-dom";
+
 
 
 function Header() {
 
     const dispatch = useDispatch()
+    const navigation = useNavigate()
  
   return (
     <div className='headerContainer'>
@@ -26,7 +29,7 @@ function Header() {
             <h2 className="HeaderHeadingTwo fontFamily">Dream Home</h2>
             <h3 className="HeaderHeadingThree ">Get your model plan Rs 1</h3>
             <div className="HeadarBtns">
-            <button className="HeaderDownloadBtn">Download Free Plan</button>
+            <button className="HeaderDownloadBtn" onClick={()=>navigation('/plan')}>Download Free Plan</button>
             <button className="HeaderEnquriryBtn" onClick={()=>dispatch(fromActiveAction(true))}>Make Enquriry</button>
             </div>
         </div>

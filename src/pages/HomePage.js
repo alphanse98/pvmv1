@@ -8,6 +8,7 @@ import FooterSection from "../components/FooterSection";
 import WalkThrough from "../components/WalkThrough";
 import Gallery from "../components/Gallery" 
 import PopPupForm from "../components/PopPupForm";
+import MobileNavBar from "../components/MobileNavBar";
 // import FileUploadComponent from "../components/FileUploadComponent";
 // import Upload from "../components/Upload";
 // import FileUploader from "../components/FileUploader";
@@ -24,7 +25,9 @@ function HomePage() {
         <Interior/>
         <WalkThrough/>
         <FooterSection/>
+        {/* comman componetns */}
         <PopPupForm/>
+        <MobileNavBar/>
       </div>
     );
   }

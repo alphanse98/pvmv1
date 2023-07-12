@@ -2,9 +2,13 @@ import floorPLan1 from '../assets/floorplan1.jpeg'
 import floorPLan2 from '../assets/floorplan2.jpeg'
 import floorPLan3 from '../assets/floorplan3.jpeg'
 import floorPLan4 from '../assets/floorplan4.jpeg'
+import { useNavigate } from "react-router-dom";
+
 
 
 function FloorPlan() {
+  const navigation = useNavigate()
+
   return (
     <div className="headerContainer">
       <section className="serviceFieldsFlex">
@@ -23,7 +27,7 @@ function FloorPlan() {
             ante, semper a lacus non, vulputate cursus mauris. Lorem ipsum dolor
             sit amet
           </p>
-          <button className='HeaderDownloadBtn btnCetnre'>Viwe More</button>
+          <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
         </div>
         <div className="serviceFieldsImgBOx">
             <div className='serviceFieldsImgFlexOne'>

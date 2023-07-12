@@ -1,6 +1,9 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
+
 
 const Gallery = () => {
+    const navigation = useNavigate()
   return (
   <section className='headerContainer'>
       <div className='gallerySection'>
@@ -54,7 +57,7 @@ const Gallery = () => {
             </div>
            
         </div>
-        <button className='HeaderDownloadBtn btnCetnre'>Viwe More</button>
+        <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
       </div>
   </section>
   )

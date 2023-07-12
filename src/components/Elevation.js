@@ -2,9 +2,12 @@ import elevation1 from '../assets/elevation1.jpeg'
 import elevation2 from '../assets/elevation2.jpeg'
 import elevation3 from '../assets/elevation3.jpeg'
 import elevation4 from '../assets/elevation4.jpeg'
+import { useNavigate } from "react-router-dom";
+
 
 
 function Elevation() {
+  const navigation = useNavigate()
   return (
     <div className="headerContainer">
       <section className="serviceFieldsFlex serviceFieldsOdd">
@@ -17,7 +20,7 @@ function Elevation() {
             A well-designed elevation prevents the risk of an unappealing appearance after construction.
             By striving for visual harmony and considering the intended lifestyle, the house elevation plays a crucial role in achieving an attractive and inviting final outcome.
           </p>
-          <button className='HeaderDownloadBtn btnCetnre'>Viwe More</button>
+          <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
         </div>
         <div className="serviceFieldsImgBOx">
             <div className='serviceFieldsImgFlexOne'>
