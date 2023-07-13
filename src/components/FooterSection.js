@@ -15,7 +15,6 @@ function FooterSection() {
   const [formData, setFormData] = useState()
   const [loader, setLOader] = useState(false);
 
-  console.log(formData)
 
 
   const uservalidation = Yup.object().shape({

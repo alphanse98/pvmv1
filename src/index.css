@@ -118,6 +118,9 @@ html{
 }
 .MobileNavBarIcons{
   width: 30px;
+  /* filter: invert(52%) sepia(43%) saturate(4952%) hue-rotate(162deg) brightness(96%) contrast(101%); */
+  /* filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%); */
+  /* filter: invert(93%) sepia(8%) saturate(1817%) hue-rotate(309deg) brightness(98%) contrast(109%); */
 }
 @media (min-width: 600px) {
   .MobileNavBar{
@@ -134,7 +137,7 @@ html{
 }
 
 .CardListCard{
-  width: 160px;
+  width: 35%;
   border-radius: 10px;
   background-color:white;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
@@ -147,7 +150,8 @@ html{
  
 .CardListImg{
   width: 100%;
-  height: 120px;
+  height: 10%;
+  /* height: 120px; */
   border-radius: 10px;
   /* border-style: groove;
   border-width: 1px;
@@ -155,13 +159,61 @@ html{
 }
 .CardListContent{
   padding: 10px;
-
 }
 .CardListPara{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: .9rem;
 }
+.CardListHeating{
+  color: #2E3A59;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.CardListBtn{
+  padding: 12px;
+  background-color: #269CDD;
+  border-style: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+@media (min-width: 850px) {
+  .CardListCard{
+    width: 25%;
+  }
+  .CardListHeating{
+    font-size: 1.3rem;
+  }
+  .CardListPara{
+    font-size: 1.1rem;
+  }
+  .CardListCard{
+    padding: 1rem;
+    /* margin: 20px; */
+  }
+  .CardListBtn{
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+}
+@media (min-width: 1400px) {
+  .CardListCard{
+    width: 20%;
+    margin: 20px;
+  }
+}
+
+
  /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
 
 .navBar{
