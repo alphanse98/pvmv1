@@ -130,33 +130,50 @@ html{
  /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
 /* card list  */
 .CardListSearch{
-
+  display: flex;
+  align-items: center;
+}
+.CardListSearch-custom{
+  display: none;
+  width: 50%;
 }
 .CardListSearchInput{
-  margin: 0px auto;
   display: flex;
-  width: 60%;
+  width: 100%;
   height: 40px;
-  margin-top: 12px;
-  margin-bottom: 10px;
   background-color: #F0F0F0;
   border-style: none;
   border-radius: 5px;
-  padding-left: 80px;
+  padding-left: 50px;
   font-family: 'Montserrat', sans-serif;
   color: #8F9BB3;
   font-size: 1rem;
   font-weight: 500;
-  /* position: relative; */
 }
 .CardListSearchInput:focus {
   outline: none;
 }
+
+.CardListSearch-btn{
+  margin-left: 10px;
+}
+.CardListSearch-position{
+  position: relative;
+  margin: 0px auto;
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+  margin-top: 25px; 
+  margin-bottom: 10px;
+
+}
+
 .searchIcon {
   position: absolute;
-  top: 25px;
-  left: 14%;
+  top: 12px;
+  left: 1rem;
 }
+
 .CardList{
   display: flex;
   flex-wrap: wrap;
@@ -178,7 +195,6 @@ html{
 .CardListImg{
   position: relative;
 }
-
 .CardListImg > img{
   width: 100%;
   height: 10%;
@@ -227,6 +243,21 @@ html{
   letter-spacing: 0.05em;
   cursor: pointer;
 }
+@media (min-width: 600px) {
+  /* .CardListSearch-position{
+    width: 50%;
+  } */
+  .CardListSearch-custom{
+    display: block;
+    width: 50%;
+ 
+  }
+  .CardListSearch{
+    width: 80%;
+    margin: 0% auto;
+  }
+}
+
 @media (min-width: 850px) {
   .CardListCard{
     width: 25%;
@@ -252,15 +283,24 @@ html{
 }
 @media (min-width: 1400px) {
   .CardListCard{
-    width: 25%;
+    width: 20%;
     margin: 20px;
   }
-  .ShareIcon img{
+  /* .ShareIcon img{
     width: 2.5rem;
-  }
+  } */
   .CardList{
-    width: 70%;
     margin: 0px auto;
+  }
+  .CardListSearch{
+    width: 90%;
+    margin: 0% auto;
+  }
+  .CardListSearchInput{
+    width: 50%;
+  }
+  .searchIconImg{
+    display: none;
   }
 
 }
@@ -270,9 +310,10 @@ html{
 
 .navBar{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
 }
 .navBar a{
   color: #101426;
