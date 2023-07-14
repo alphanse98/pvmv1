@@ -1,8 +1,7 @@
-import React from 'react'
-
+import FooterSection from "../components/FooterSection"
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <div><FooterSection/></div>
   )
 }
 

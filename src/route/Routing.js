@@ -10,10 +10,10 @@ const Routing = () => {
   return (
    <BrowserRouter>
       <Routes>
-      <Route path="/" element={<HomePage />}></Route>
-      <Route path="/gallery" element={<GalleryPage />}></Route>
-      <Route path="/plan" element={<PlanPage />}></Route>
-      <Route path="/about" element={<AboutPage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/gallery" element={<GalleryPage />}></Route>
+        <Route path="/plan" element={<PlanPage />}></Route>
+        <Route path="/about" element={<AboutPage />}></Route>
       </Routes>
    </BrowserRouter>
   )
