@@ -563,6 +563,8 @@ display: flex;}
  .serviceSection{
   background-color: #F8F8F8;
   /* background-color: #E4E9F2; */
+  /* background-color: #F0F5F9; */
+
   width: 100%;
   padding-bottom: 30px;
 
@@ -772,7 +774,12 @@ margin-top: 20px;
   }
  }
  .serviceFieldsOdd{
-  background-color: #E4E9F2;
+  /* background-color: #E4E9F2; */
+  /* background-color: #EFEFEF; */
+  background-color: #F0F5F9;
+  /* background-color: #F8F8F8; */
+
+ 
  }
    /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
 /*  WalkThrough*/

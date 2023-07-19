@@ -6,6 +6,27 @@ window.Buffer = window.Buffer || require("buffer").Buffer;
 
 // a React functional component, used to create a simple upload input and button
 
+let dataStructure =[{ 
+                        id:12345, 
+                        Heating:"plan", 
+                        content:"plan", 
+                        Dimension:"25X45", 
+                        area:"plan", 
+                        facing:"North", 
+                        vasthu:"No", 
+                        details :[],
+                        filterBy :'plan',
+                        isActive :false,
+                        premium :false,
+                        imgLocatrions:[],
+                        pdfLocation:"pace2dplans.s3-ap-south-1.amazonaws.com/Screensho",
+                        // seo
+                        imgAlr : "img content",
+                        seoTitle : "lorump",
+                        seoKeyWords : "lorump",
+                        seoDiscription : "lorump",
+                    }]
+
 const Upload = () => {
 
     const [selectedFile, setSelectedFile] = useState(null);
@@ -44,7 +65,7 @@ const Upload = () => {
                 uplosdetFileList.push(data.location);
               } catch (err) {
                 console.error(err);
-              }
+            }
 
         }
         SetimgLocation(uplosdetFileList)

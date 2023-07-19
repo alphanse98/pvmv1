@@ -56,7 +56,7 @@ function FooterSection() {
             <p className='errorMsg fontFamily'>{errors.name || touched.name  } </p>
             <input placeholder="Phone Number" type="number" className="FooterInp" value={values.mobile} onChange={(e)=>setFieldValue("mobile",e.target.value)}></input>
             <p className='errorMsg fontFamily'>{errors.mobile || touched.mobile} </p>
-            <input placeholder="Email" className="FooterInp" type='Email' value={values.email} onChange={(e)=>setFieldValue("email",e.target.value)}></input>
+            <input placeholder="Email" className="FooterInp" type='Email' value={values.email} name='Email' onChange={(e)=>setFieldValue("email",e.target.value)}></input>
             <p className='errorMsg fontFamily'>{errors.email || touched.email} </p>
 
             <textarea
@@ -69,7 +69,6 @@ function FooterSection() {
 
             {loader? <div className='FooterBtn FooterLoading'><BarLoader color="#FFFFFF" /> </div>:<button className="FooterBtn"  onClick={submitForm}>Submit</button>}
           </div>
-          {/* <BarLoader color="#FFFFFF" />  */}
          
           <div className="FooterAbout" >
           <h1 className="FooterAboutHeading FooterHeadding fontFamily" id="About">About Us</h1>
