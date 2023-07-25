@@ -1,5 +1,7 @@
 import React , {useEffect, useState} from 'react';
 import S3 from 'react-aws-s3';
+import axios from "axios";
+
 
 // installed using npm install buffer --save
 window.Buffer = window.Buffer || require("buffer").Buffer;
@@ -21,7 +23,7 @@ let dataStructure =[{
                         imgLocatrions:[],
                         pdfLocation:"pace2dplans.s3-ap-south-1.amazonaws.com/Screensho",
                         // seo
-                        imgAlr : "img content",
+                        imgAlt : "img content",
                         seoTitle : "lorump",
                         seoKeyWords : "lorump",
                         seoDiscription : "lorump",
@@ -80,12 +82,53 @@ const Upload = () => {
         // .catch(err => console.error(err))
     }
 
+    // let testPOst = async ()=>{
+    //     const id = "64ba45da58aa0e5b62c45fcf";
+
+    //     try{
+    //         const res = await axios.get(`http://localhost:5000/api/testTile/${id}`)
+    //         console.log(res.data)
+    //     }catch (error){
+    //         console.log(error,"error")
+    //     }
+    // }
+
+    let data = { 
+                 heading:'10X30 elevation',
+                 content:'20X30 plan kpoijkoifjo icvoi cew hciue huic hiue hcuh',
+                 dimension:'20X30 ',
+                 imgPdfLocation:'https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Screenshot (125).png',
+                 area:'500 sqft ',
+                 facing:'south ',
+                 vasthu:true,
+                 details: ['plan', 45],
+                 filter: 'elevation',
+                 isActive: true,
+                 premium: true,
+                 imgLocatrions: ['https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Screenshot (125).png', 'https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Screenshot (126).png'],
+                 imgAlt: 'plan',
+                 seoTitle: 'seoTitle',
+                 seoKeyWords: 'seoKeyWords',
+                 seoDiscription: 'seoDiscription',
+                }
+
+    let testPOst = async ()=>{
+        try{
+            const res = await axios.post("http://localhost:4000/api/gallery",data)
+            // const res = await axios.get("http://localhost:4000/api/plan")
+            console.log(res)
+        }catch (error){
+            console.log(error,"error")
+        }
+    }
+
 
     return <div>
         <div>React S3 File Upload</div>
         <input type="file" multiple onChange={handleFileInput} />
         <br></br>
         <button onClick={() => uploadFile()}> Upload to S3</button>
+        <button onClick={() => testPOst()}> testPOst</button>
         {imgLocation.map((itme,index)=>(
             <div key={index}>
                 {/* <img src={itme} className='re' ></img>  */}

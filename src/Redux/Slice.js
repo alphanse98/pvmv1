@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// const [fromActive, setFromActive] = useState(false);
-
 export let slices = createSlice({
   name: "fromActive",
 

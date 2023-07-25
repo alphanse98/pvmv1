@@ -75,6 +75,45 @@ html{
   margin-bottom: 2rem;
   height: 50px;
 }
+
+.shrePopUpIcons{
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  /* justify-content: center; */
+  /* background-color: #101426; */
+}
+.shrePopUpIcons  img{
+  cursor: pointer;
+}
+.shareBox{
+  display: block;
+  padding-left: 30px;
+}
+.shareHeading{
+  justify-content: start !important;
+}
+.copyLing{
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+.shareLingBox{
+  width: 90%;
+  padding: 5px;
+  padding-left: 10px;
+  background-color: #E4E9F2;
+  border-radius: 8px;
+}
+.shareLingBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lingText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 @media (min-width: 600px) {
   .popupicon{
     width: 5rem;
@@ -84,6 +123,17 @@ html{
   .formBox{
     width: 450px;
   }
+  .shrePopUpIcons{
+
+  }
+  .shrePopUpIcons  img{
+    width: 4rem;
+  }
+  .shrePopUpIcons{
+ 
+    gap: 2rem;
+  }
+
 }
 @media (min-width: 750px) {
   .formBox{

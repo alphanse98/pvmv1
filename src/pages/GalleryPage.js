@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import MobileNavBar from '../components/MobileNavBar';
 import PopPupForm from "../components/PopPupForm";
 import FooterSection from "../components/FooterSection"
+import SharePopup from '../components/SharePopup';
 
 const GalleryPage = () => {
   return (
@@ -11,6 +12,7 @@ const GalleryPage = () => {
       <PopPupForm/>
       <MobileNavBar/>
       <FooterSection/>
+      <SharePopup/>
     </div>
   )
 }
