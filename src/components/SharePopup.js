@@ -1,23 +1,24 @@
 import React from 'react'
-import { useSelector } from "react-redux";
+import {useDispatch, useSelector } from "react-redux";
 import closeIcon from "../assets/Close.svg";
 import fbShareIcon from "../assets/fbShare.svg"
 import whShareIcon from "../assets/whShare.svg"
-import instaShareIcon from "../assets/instaShare.svg"
-import { FacebookShareButton, WhatsappShareButton } from 'react-share';
+// import instaShareIcon from "../assets/instaShare.svg"
+import { FacebookShareButton, WhatsappShareButton, } from 'react-share';
+import { shareFormAction } from "../Redux/shareFormSlice";
+
 
 
 const SharePopup = () => {
-    const {formActive, } = useSelector((state) => state.shareFormSlice);
+
+    const {formActive, url} = useSelector((state) => state.shareFormSlice.formActive);
     let tedturl = "amazom.com"
+    const dispatch = useDispatch();
 
-    let caption="caption"
-    const InstagramShare = () => {
-      // Replace 'your-text-here' with the text you want to pre-fill in the Instagram caption (optional).
-      const shareUrl = `https://www.instagram.com/?url=${encodeURIComponent(tedturl)}&caption=${encodeURIComponent(caption)}`;
-    window.open(shareUrl, '_blank', 'height=600,width=800,resizable=1');
+    const handlePopupClose = () => {
+      dispatch(shareFormAction({formActive:false, url:''}));
     };
-
+  
     const copyUrl = ()=>{
       // Copy the text inside the text field
        navigator.clipboard.writeText(tedturl);
@@ -30,7 +31,7 @@ const SharePopup = () => {
         <div className="fromActive">
             <div className='formBox shareBox'> 
             {/* close icon*/}
-            <img src={closeIcon} className="closeIcon"  alt="closeIcon"></img>
+            <img src={closeIcon} className="closeIcon"  onClick={handlePopupClose} alt="closeIcon"></img>
             <p className=' shareHeading serviceHeading fontFamily'>Share Link</p>
             {/* share icons  */}
             <div className='shrePopUpIcons'>
@@ -40,7 +41,6 @@ const SharePopup = () => {
                 <WhatsappShareButton url={tedturl}>
                   <img src={whShareIcon} alt='whShareIcon'></img>
                 </WhatsappShareButton>
-                  <img src={instaShareIcon} onClick={()=>InstagramShare()} alt='instaShareIcon'></img>
             </div>
             <p className='copyLing fontFamily'>or copy link</p>
             <div className='shareLingBox'>

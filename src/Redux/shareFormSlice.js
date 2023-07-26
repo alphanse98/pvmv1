@@ -1,16 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export let shareFormSlice = createSlice({
-    name: "shareForm",
+    name: "formActive",
 
     initialState: {
-        formActive: true,
-        url: "",
+        formActive:{formActive: true,url:"alphanse"},
     },
 
     reducers: {
         shareFormAction: (state, action) => {
-          state.fromActive = action.payload;
+          state.formActive = action.payload;
         },
     },
 })
