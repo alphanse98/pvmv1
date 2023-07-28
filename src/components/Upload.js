@@ -20,7 +20,7 @@ let dataStructure =[{
                         filterBy :'plan',
                         isActive :false,
                         premium :false,
-                        imgLocatrions:[],
+                        imgLocations:[],
                         pdfLocation:"pace2dplans.s3-ap-south-1.amazonaws.com/Screensho",
                         // seo
                         imgAlt : "img content",
@@ -131,7 +131,7 @@ const Upload = () => {
         <button onClick={() => testPOst()}> testPOst</button>
         {imgLocation.map((itme,index)=>(
             <div key={index}>
-                {/* <img src={itme} className='re' ></img>  */}
+                <img src={itme} className='re' ></img> 
                 <p>{itme}</p>
             </div>
         ))}
