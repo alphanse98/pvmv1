@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Details from "../components/Details"
+import CardList from "../components/CardList"
+import FooterSection from "../components/FooterSection"
 
 export const DetailPage = () => {
 const [detailsData, setDetailsData] = useState({ 
@@ -10,7 +12,7 @@ const [detailsData, setDetailsData] = useState({
     area:"1500 Sqft", 
     facing:"North", 
     vasthu:"No", 
-    details :["2BHk", "2 Floor", "Morden", ],
+    details :["2BHk", "2 Floor", "Morden","2BHk", "2 Floor", "Morden", ],
     filterBy :'plan',
     isActive :false,
     premium :false,
@@ -25,6 +27,8 @@ const [detailsData, setDetailsData] = useState({
   return (
     <div>
         <Details detailsData ={detailsData} />
+        <CardList/>
+        <FooterSection/>
     </div>
   )
 }

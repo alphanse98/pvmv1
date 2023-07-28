@@ -6,7 +6,8 @@ const CardList = () => {
     let arr = [3,4,5,6,7,8,9,0,0,0,0,0,0,0,0,0,0,0,0]
   return (
     <div className="headerContainer">
-        <div className="CardListSearch">
+
+        {/* <div className="CardListSearch">
             <nav className="CardListSearch-custom">
                 <ul className='navBar '>
                     <li><a href="/" className='fontFamily'>Home</a></li>
@@ -15,15 +16,16 @@ const CardList = () => {
                     <li><a href="/About" className='fontFamily'>About</a></li>
                 </ul>   
             </nav>
-            {/* search input */}
-            <div className="CardListSearch-position">
+            search input */}
+            {/* <div className="CardListSearch-position">
                 <input className='CardListSearchInput' placeholder="search"></input>
                 <div className="searchIcon">
                     <img src={searchIcon} className="searchIconImg"></img>
                 </div>
                 <button className="CardListBtn CardListSearch-btn">Search</button>
             </div>  
-        </div>
+        </div> */}
+
         <div className='CardList '>
             {arr.map((index,item) => (
                 <div className='CardListCard' key={index}>

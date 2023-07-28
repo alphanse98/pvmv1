@@ -7,7 +7,7 @@ const Details = ({detailsData}) => {
     const [mainImg, setMainImg]= useState()
 
     useEffect(()=>{
-        setMainImg(detailsData?.imgLocations[0])
+        setMainImg(detailsData?.imgLocations[1])
     },[])
 
   return (
