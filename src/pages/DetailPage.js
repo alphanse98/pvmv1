@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Details from "../components/Details"
 import CardList from "../components/CardList"
 import FooterSection from "../components/FooterSection"
+import MobileNavBar from '../components/MobileNavBar'
 
 export const DetailPage = () => {
 const [detailsData, setDetailsData] = useState({ 
@@ -28,6 +29,7 @@ const [detailsData, setDetailsData] = useState({
     <div>
         <Details detailsData ={detailsData} />
         <CardList/>
+        <MobileNavBar/>
         <FooterSection/>
     </div>
   )

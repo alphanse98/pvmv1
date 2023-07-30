@@ -84,7 +84,7 @@ const PopPupForm = () => {
                     {errors.email || touched.email}{" "}
                   </p>
 
-                  <textarea
+                  {/* <textarea
                     placeholder="Description"
                     className="formInpit popupDescription"
                     type="text"
@@ -92,7 +92,7 @@ const PopPupForm = () => {
                     onChange={(e) =>
                       setFieldValue("Description", e.target.value)
                     }
-                  ></textarea>
+                  ></textarea> */}
 
                   {loader? <BarLoader color="#269CDD" className="HeaderDownloadBtn "/> :
                   <button className="HeaderDownloadBtn " onClick={submitForm}>

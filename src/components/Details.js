@@ -13,7 +13,6 @@ const Details = ({detailsData}) => {
   return (
     <div className='detailsCom'>
         <div className='details'>
-
             {/* flex box one */}
             <div className='detailsBoxOne'>
                 <div className='mainImgBox'>

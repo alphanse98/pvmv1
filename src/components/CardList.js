@@ -1,12 +1,16 @@
 import picture from "../assets/ali-moradi-y8e2n6eCXmo-unsplash (3).jpg" 
-import searchIcon from "../assets/SearchIcon.svg"
 import ShareIcon from "../assets/ShareIcon.svg"
 import DownloadIcon from "../assets/DownloadIcon.svg"
+import { useNavigate } from "react-router-dom";
+
 const CardList = () => {
     let arr = [3,4,5,6,7,8,9,0,0,0,0,0,0,0,0,0,0,0,0]
+    const navigation = useNavigate()
+
+
   return (
     <div className="headerContainer">
-
+        {/* /plans/detail */}
         {/* <div className="CardListSearch">
             <nav className="CardListSearch-custom">
                 <ul className='navBar '>
@@ -27,7 +31,7 @@ const CardList = () => {
         </div> */}
 
         <div className='CardList '>
-            {arr.map((index,item) => (
+            {arr.map((index) => (
                 <div className='CardListCard' key={index}>
                     <div className="CardListImg">
                         <img src={picture} ></img>
@@ -39,7 +43,7 @@ const CardList = () => {
                     <div className="CardListContent">
                         <h1 className="CardListHeating fontFamily">Heating</h1>
                         <p className="CardListPara fontFamily">Lorem ipsum dolor sit amet, consectetur adipiscing eli  ;lmklkm kji  i</p>
-                        <button className='CardListBtn  btnCetnre'>View Details</button>
+                        <button className='CardListBtn  btnCetnre'onClick={()=>navigation("/plans/detail")}>View Details</button>
                     </div>
                 </div>
             ))}

@@ -24,7 +24,8 @@ const PostApi = ({ formData, setFormData, setLOader }) => {
   const handleClick = async () => {
     try {
       const response = await axios.post(
-        "https://pvm-rl1b.onrender.com/api/postusers",
+        // "https://pvm-rl1b.onrender.com/api/postusers",
+        "http://localhost:4000/api/user",
         formData
       );
       getResponse(response.data);

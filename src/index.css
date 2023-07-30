@@ -25,7 +25,7 @@ html{
   position: fixed;
   bottom: 85px;
   right: 10px;
-  width: 4rem;
+  width: 3.5rem;
   cursor: pointer;
 }
 .fromActive{
@@ -160,7 +160,7 @@ html{
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 70px;
+  height: 55px;
   background-color: #269CDD;
   background-color: #fff;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.15);
@@ -234,14 +234,13 @@ html{
   
 }
 .CardListCard{
-  width: 35%;
+  width: 37%;
   border-radius: 10px;
   background-color:white;
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.3);
-  border-style: groove;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  border-style: groove;
   border-width: 1%;
   border-color: #269CDD; 
-  margin: 10px;
+  margin: 8px;
   padding: 10px;
 }
 .CardListImg{
@@ -718,12 +717,18 @@ font-weight: 500;
 margin-bottom: 20px;
 }
 .serviceFieldsParagraph{
-  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Montserrat', sans-serif;
   text-align: left;
   letter-spacing: 0.05em;
   font-size: 0.9rem;
   line-height: 160%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05em; */
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: .2px;
+  color: #6b6b6b;
 }
 .serviceFieldsImgBOx{
   padding: 0px 30px;
@@ -762,6 +767,7 @@ margin-top: 20px;
   }
   .serviceFieldsParagraph{
     font-size: 1rem;
+    line-height: 27px;
   }
   
 }
@@ -877,7 +883,8 @@ margin-top: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
-   padding-bottom: 50px;
+   padding-bottom: 90px;
+   margin-top: 20px;
 }
 .FooterSendQuote{
   display: flex;
@@ -1089,9 +1096,11 @@ margin-top: 10px;
 }
 .detailContent{
   font-family: 'Roboto', sans-serif;  font-size: 15px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 27px;
   letter-spacing: .2px;
+  color: #6b6b6b;
+
 }
 @media (min-width: 600px) {
   .deailTable{

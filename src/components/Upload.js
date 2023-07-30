@@ -105,16 +105,18 @@ const Upload = () => {
                  filter: 'elevation',
                  isActive: true,
                  premium: true,
-                 imgLocatrions: ['https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Screenshot (125).png', 'https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Screenshot (126).png'],
+                 imgLocatrions: [{img:"https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Screenshot (125).png", alt:"elevation"}, {img:"https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Screenshot (125).png", alt:"elevation"}],
                  imgAlt: 'plan',
                  seoTitle: 'seoTitle',
                  seoKeyWords: 'seoKeyWords',
                  seoDiscription: 'seoDiscription',
                 }
-
+                    // let apiTest = {Name:"api test",Mobile:7418529630,Description:'api test'}
+                    let apiTest = {name:"api test",mobile:7418529630,email:"alphanse@gmail.com",Description:'api test'}
+                    // /user
     let testPOst = async ()=>{
         try{
-            const res = await axios.post("http://localhost:4000/api/gallery",data)
+            const res = await axios.post("http://localhost:4000/api/plan",data)
             // const res = await axios.get("http://localhost:4000/api/plan")
             console.log(res)
         }catch (error){

@@ -10,12 +10,12 @@ import Gallery from "../components/Gallery"
 import PopPupForm from "../components/PopPupForm";
 import MobileNavBar from "../components/MobileNavBar";
 // import FileUploadComponent from "../components/FileUploadComponent";
-import Upload from "../components/Upload";
+// import Upload from "../components/Upload";
 // import FileUploader from "../components/FileUploader";
 function HomePage() {
     return (
       <div>
-        <Upload/>
+        {/* <Upload/> */}
         <Header/>
         <Gallery/>
         <Services/> 

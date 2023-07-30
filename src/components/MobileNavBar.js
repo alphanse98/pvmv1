@@ -10,7 +10,7 @@ const MobileNavBar = () => {
     <div className='MobileNavBar'>
         <img src={HomeIcon} className="MobileNavBarIcons" onClick={()=>navigation("/")} alt="m"></img>
         <img src={galleryIcon} className="MobileNavBarIcons" onClick={()=>navigation("/gallery")}  alt="m"></img>
-        <img src={planIcon} className="MobileNavBarIcons" onClick={()=>navigation("/plan")}  alt="m"></img>
+        <img src={planIcon} className="MobileNavBarIcons" onClick={()=>navigation("/plans")}  alt="m"></img>
         <img src={aboutIcon} className="MobileNavBarIcons" onClick={()=>navigation("/about")}  alt="m"></img>
     </div>
   )

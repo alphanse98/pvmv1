@@ -15,7 +15,7 @@ function Plan() {
           <p className="serviceFieldsParagraph" >
           The 2D plan depicts the fundamental layout of a property, facilitating efficient space planning to maximize functionality and make the best use of the available space. Our team will meticulously design a 2D plan, meticulously aligning all relevant structures, adhering to Vastu principles, and incorporating elements from nature. Ensuring precise representation of proportions and sizes is crucial, particularly in areas where congestion may be a concern.
           </p>
-          <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation('/plan')}>Viwe More</button>
+          <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation('/plans')}>Viwe More</button>
         </div>
         <div className="serviceFieldsImgBOx">
             <div className='serviceFieldsImgFlexOne'>
