@@ -7,7 +7,7 @@ const Details = ({detailsData}) => {
     const [mainImg, setMainImg]= useState()
 
     useEffect(()=>{
-        setMainImg(detailsData?.imgLocations[1])
+        setMainImg(detailsData?.imgLocations[0])
     },[])
 
   return (
@@ -16,11 +16,11 @@ const Details = ({detailsData}) => {
             {/* flex box one */}
             <div className='detailsBoxOne'>
                 <div className='mainImgBox'>
-                    <img className='mainImg' src={mainImg}></img>
+                    <img className='mainImg' src={mainImg?.img} alt={mainImg?.alt} ></img>
                 </div>
                 <div>
                     {detailsData?.imgLocations?.map((item, index)=>(
-                        <img className='subImgs' src={item} onClick={()=>setMainImg(item)} key={index}></img>
+                        <img className='subImgs' src={item?.img} alt={item?.alt}  onClick={()=>setMainImg(item)} key={index}></img>
                     ))}
                 </div>
             </div>
@@ -32,7 +32,7 @@ const Details = ({detailsData}) => {
                     <img src={DownloadIcon} className='detailIcon'  alt='DownloadIcon'></img>
                     <button className='detailBtn HeaderDownloadBtn fontFamily'>Contact</button>
                 </div>
-                <p className='detailHeading serviceHeading fontFamily'>{detailsData?.Heating}</p>
+                <p className='detailHeading serviceHeading fontFamily'>{detailsData?.heading}</p>
                 {/* table */}
                 <table className='deailTable'>
                     <tr>

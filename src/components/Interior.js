@@ -4,8 +4,6 @@ import interior3 from '../assets/interior3.jpeg'
 import interior4 from '../assets/interior4.jpg'
 import { useNavigate } from "react-router-dom";
 
-
-
 function Interior() {
   const navigation = useNavigate()
     return (
@@ -29,12 +27,12 @@ function Interior() {
           </div>
           <div className="serviceFieldsImgBOx">
               <div className='serviceFieldsImgFlexOne'>
-                  <img src={interior1} className='serviceFieldsImgs' alt=''></img>
-                  <img src={interior2} className='serviceFieldsImgs' alt=''></img>
+                  <img src={interior1} className='serviceFieldsImgs' alt='interior'></img>
+                  <img src={interior2} className='serviceFieldsImgs' alt='interior1'></img>
               </div>
               <div className='serviceFieldsImgFlexTwo'>
-                  <img src={interior3} className='serviceFieldsImgs' alt=''></img>
-                  <img src={interior4} className='serviceFieldsImgs' alt=''></img>
+                  <img src={interior3} className='serviceFieldsImgs' alt='interior1'></img>
+                  <img src={interior4} className='serviceFieldsImgs' alt='interior1'></img>
               </div>
           </div>
         </section>

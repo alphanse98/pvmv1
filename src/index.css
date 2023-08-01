@@ -248,7 +248,7 @@ html{
 }
 .CardListImg > img{
   width: 100%;
-  height: 10%;
+  height: 34vw;
   border-radius: 10px;
 }
 
@@ -330,6 +330,9 @@ html{
   .ShareIcon img{
     width: 2rem;
   }
+  .CardListImg > img{
+    height: 21vw;
+  }
 
 }
 @media (min-width: 1400px) {
@@ -339,7 +342,6 @@ html{
   }
   .CardListImg > img{
     height: 250px;
-
   }
   /* .ShareIcon img{
     width: 2.5rem;
