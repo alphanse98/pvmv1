@@ -4,7 +4,7 @@ export let shareFormSlice = createSlice({
     name: "formActive",
 
     initialState: {
-        formActive:{formActive: true,url:"alphanse"},
+        formActive:{formActive:false, url:""},
     },
 
     reducers: {

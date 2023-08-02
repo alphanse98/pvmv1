@@ -12,7 +12,6 @@ import { shareFormAction } from "../Redux/shareFormSlice";
 const SharePopup = () => {
 
     const {formActive, url} = useSelector((state) => state.shareFormSlice.formActive);
-    let tedturl = "amazom.com"
     const dispatch = useDispatch();
 
     const handlePopupClose = () => {
@@ -21,7 +20,7 @@ const SharePopup = () => {
   
     const copyUrl = ()=>{
       // Copy the text inside the text field
-       navigator.clipboard.writeText(tedturl);
+       navigator.clipboard.writeText(url);
     }
 
   return (
@@ -35,16 +34,16 @@ const SharePopup = () => {
             <p className=' shareHeading serviceHeading fontFamily'>Share Link</p>
             {/* share icons  */}
             <div className='shrePopUpIcons'>
-                <FacebookShareButton url={tedturl}>
+                <FacebookShareButton url={url}>
                   <img src={fbShareIcon}  alt='fbShareIcon'></img>
                 </FacebookShareButton>  
-                <WhatsappShareButton url={tedturl}>
+                <WhatsappShareButton url={url}>
                   <img src={whShareIcon} alt='whShareIcon'></img>
                 </WhatsappShareButton>
             </div>
             <p className='copyLing fontFamily'>or copy link</p>
             <div className='shareLingBox'>
-                <p className='lingText fontFamily'>{tedturl}</p>
+                <p className='lingText fontFamily'>{url}</p>
                 <button className='HeaderDownloadBtn' onClick={()=>copyUrl()}>Copy</button>
             </div>
             </div>

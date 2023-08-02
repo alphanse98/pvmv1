@@ -1,14 +1,35 @@
 import React, { useEffect, useState } from 'react'
 import ShareIcon from "../assets/share2.svg"
 import DownloadIcon from "../assets/dowload2.svg"
+import {useDispatch,  } from "react-redux";
+import { shareFormAction } from "../Redux/shareFormSlice";
+import {  useLocation  } from "react-router-dom";
 
 const Details = ({detailsData}) => {
     
     const [mainImg, setMainImg]= useState()
-
+    // uptade the main img from detailsData imgLocations (array) 
     useEffect(()=>{
         setMainImg(detailsData?.imgLocations[0])
     },[])
+
+    const dispatch = useDispatch();
+    const origin = window.location.origin
+    const  {pathname}  = useLocation();
+    const urlPathOne = pathname.split("/")[1]
+
+     // example 
+    // http://localhost:3000/gallery/detail/64c8d21e23643e65ca974369
+    //pathname =/gallery/detail/64c8d21e23643e65ca974369
+    // origin = http://localhost:3000
+    // urlPathOne = gallery
+    // urlPathTwo = detail
+
+    // active the sahre popup and update the url to redux
+    const sharePopup = (id) => {
+        const shareUrl = origin+"/"+urlPathOne+"/detail/"+id
+        dispatch(shareFormAction({formActive:true, url:shareUrl}));
+    };
 
   return (
     <div className='detailsCom'>
@@ -28,7 +49,7 @@ const Details = ({detailsData}) => {
             {/* flex box two */}
             <div className='detailsBoxTwo'>
                 <div className='detailIcons'>
-                    <img src={ShareIcon} className='detailIcon' alt='ShareIcon'></img>
+                    <img src={ShareIcon} className='detailIcon' alt='ShareIcon' onClick={()=>sharePopup(detailsData?._id)}></img>
                     <img src={DownloadIcon} className='detailIcon'  alt='DownloadIcon'></img>
                     <button className='detailBtn HeaderDownloadBtn fontFamily'>Contact</button>
                 </div>

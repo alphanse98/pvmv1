@@ -5,9 +5,9 @@ import FooterSection from "../components/FooterSection"
 import MobileNavBar from '../components/MobileNavBar'
 // import { useSelector } from "react-redux";
 import { useLocation, useParams } from 'react-router-dom';
-import axios from 'axios'
-
-
+import axios from 'axios';
+import SharePopup from '../components/SharePopup';
+import PopPupForm from '../components/PopPupForm'
 
 export const DetailPage = () => {
 
@@ -18,7 +18,7 @@ export const DetailPage = () => {
   const [cardsData, setCardsData] = useState([])
 
  
-  const getdetailsData =  async (apiById,) => {
+  const getdetailsData =  async (apiById) => {
         try {
           const res = await axios.get(apiById+id)
           setDetailsData(res?.data)
@@ -32,8 +32,8 @@ export const DetailPage = () => {
   useEffect(()=>{
     if(urlPath === "gallery"){
       getdetailsData("http://localhost:4000/api/gallery/", )
-    }else{
-      console.log(" api call")
+    }else if(urlPath === "plans"){
+      getdetailsData("http://localhost:4000/api/plan/", )
     }
   },[])
 
@@ -43,6 +43,8 @@ export const DetailPage = () => {
     <div>
         <Details detailsData ={detailsData} />
         <CardList cardsData ={cardsData}/>
+        <SharePopup/>
+        <PopPupForm/>
         <MobileNavBar/>
         <FooterSection/>
     </div>
