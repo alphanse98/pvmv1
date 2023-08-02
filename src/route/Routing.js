@@ -5,6 +5,7 @@ import GalleryPage from '../pages/GalleryPage';
 import { PlanPage } from '../pages/PlanPage';
 import AboutPage from '../pages/AboutPage';
 import { DetailPage } from '../pages/DetailPage';
+import SearchPage from '../pages/SearchPage';
 
 const Routing = () => {
 //   { 
@@ -48,6 +49,8 @@ const Routing = () => {
         <Route path="/plans" element={<PlanPage />}></Route>
         <Route path="/gallery/detail/:id" element={<DetailPage />}></Route>
         <Route path="/plans/detail/:id" element={<DetailPage />}></Route>
+        <Route path="/plans/search" element={<SearchPage />}></Route>
+        <Route path="/gallery/search" element={<SearchPage />}></Route>
         <Route path="/about" element={<AboutPage />}></Route>
       </Routes>
    </BrowserRouter>

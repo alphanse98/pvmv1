@@ -1,8 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import searchIcon from "../assets/SearchIcon.svg"
-
+import { useSearchParams, useNavigate,  } from 'react-router-dom';
 
 const PcNavBar = () => {
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchData, setSearchData] = useState("");
+    const nav = useNavigate()
+    const pathname = window.location.pathname
+    const urlPathOne = pathname.split("/")[1]
+
+    // let params = new URL(document.location).searchParams;
+    // let name = params.get("name"); // is the string "Jonathan Smith".
+    // let age = parseInt(params.get("age")); // is the number 18
+
+      
+
+    useEffect(()=>{
+        
+        // setSearchData(searchParams)
+         setSearchData(searchParams.get("search") || "") 
+
+    },[])
+
+
+    const searchFuction = ()=>{
+        if(searchData)nav("/"+urlPathOne+"/search?search="+searchData) 
+    } 
 
   return (
     <div>
@@ -17,11 +41,11 @@ const PcNavBar = () => {
             </nav>
             {/* search input  */}
             <div className="CardListSearch-position">
-                <input className='CardListSearchInput' placeholder="search"></input>
+                <input className='CardListSearchInput' placeholder="search" value={searchData} onChange={(e)=>setSearchData(e.target.value)}></input>
                 <div className="searchIcon">
                     <img src={searchIcon} className="searchIconImg"></img>
                 </div>
-                <button className="CardListBtn CardListSearch-btn">Search</button>
+                <button className="CardListBtn CardListSearch-btn" onClick={()=>searchFuction()}>Search</button>
             </div>  
         </div>
     </div>

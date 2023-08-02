@@ -7,8 +7,6 @@ import whShareIcon from "../assets/whShare.svg"
 import { FacebookShareButton, WhatsappShareButton, } from 'react-share';
 import { shareFormAction } from "../Redux/shareFormSlice";
 
-
-
 const SharePopup = () => {
 
     const {formActive, url} = useSelector((state) => state.shareFormSlice.formActive);
