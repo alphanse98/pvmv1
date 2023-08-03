@@ -4,24 +4,16 @@ import { useSearchParams, useNavigate,  } from 'react-router-dom';
 
 const PcNavBar = () => {
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams, ] = useSearchParams();
     const [searchData, setSearchData] = useState("");
     const nav = useNavigate()
     const pathname = window.location.pathname
     const urlPathOne = pathname.split("/")[1]
 
-    // let params = new URL(document.location).searchParams;
-    // let name = params.get("name"); // is the string "Jonathan Smith".
-    // let age = parseInt(params.get("age")); // is the number 18
-
-      
-
+    // https://www.youtube.com/watch?v=CZP1iQFQjEY
     useEffect(()=>{
-        
-        // setSearchData(searchParams)
          setSearchData(searchParams.get("search") || "") 
-
-    },[])
+    },[searchParams])
 
 
     const searchFuction = ()=>{
@@ -43,7 +35,7 @@ const PcNavBar = () => {
             <div className="CardListSearch-position">
                 <input className='CardListSearchInput' placeholder="search" value={searchData} onChange={(e)=>setSearchData(e.target.value)}></input>
                 <div className="searchIcon">
-                    <img src={searchIcon} className="searchIconImg"></img>
+                    <img src={searchIcon} className="searchIconImg" alt='searchIcon'></img>
                 </div>
                 <button className="CardListBtn CardListSearch-btn" onClick={()=>searchFuction()}>Search</button>
             </div>  

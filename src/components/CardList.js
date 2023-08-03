@@ -17,21 +17,22 @@ const CardList = ({cardsData}) => {
 
     // example 
     // http://localhost:3000/gallery/detail/64c8d21e23643e65ca974369
-    //pathname =/gallery/detail/64c8d21e23643e65ca974369
+    //  pathname =/gallery/detail/64c8d21e23643e65ca974369
     // origin = http://localhost:3000
     // urlPathOne = gallery
     // urlPathTwo = detail
 
-    // if url have id replace the id or if id dont have update the url 
-    // like  http://localhost:3000/Gallery/detail/(id)
+    // (line 31) if use in detail page replace the id only
+    // (line 33) if use in search page replace replace 
+    // full url like search to detail for switch the page searchPage to detailPage
+    // (line 35) if use in plan page or plan gallery  update url like detail path and id 
 
     const navigation = (cardId)=>{
-        if(urlPathTwo){
-            // replace url id only
+        if(urlPathTwo === "detail"){
             window.location.replace(cardId);
-            // window.location.replace("https://www.amazon.in/");
-        }else{
-            // update url like detail path and id
+        } else if(urlPathTwo === "search") {
+            window.location.replace(origin+"/"+urlPathOne+"/detail/"+cardId)
+        } else{
             nav(pathname+"/detail/"+cardId)
         }
     }
