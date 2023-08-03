@@ -62,7 +62,7 @@ const Details = ({detailsData}) => {
                     </tr>
                     <tr>
                         <td>Demension</td>
-                        <td>{detailsData?.Dimension}</td>
+                        <td>{detailsData?.dimension}</td>
                     </tr>
                     <tr>
                         <td>Area</td>
