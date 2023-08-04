@@ -10,14 +10,13 @@ const PostApi = ({ formData, setFormData, setLOader }) => {
 
   // response is ok then close the popup using setFromActive
   // and clear form data and show toasting and close loading
-  const getResponse = (param) => {
+  const getResponse = () => {
     dispatch(fromActiveAction(false));
     toast.success("done", {
       position: "top-right",
     });
     setFormData("");
     setLOader(false)
-    console.log(formData , "formData response")
   };
 
   // call handleClick for api post

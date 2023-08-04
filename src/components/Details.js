@@ -11,7 +11,7 @@ const Details = ({detailsData}) => {
     // uptade the main img from detailsData imgLocations (array) 
     useEffect(()=>{
         setMainImg(detailsData?.imgLocations[0])
-    },[])
+    },[detailsData])
 
     const dispatch = useDispatch();
     const origin = window.location.origin

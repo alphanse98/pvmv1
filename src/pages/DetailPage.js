@@ -9,9 +9,13 @@ import axios from 'axios';
 import SharePopup from '../components/SharePopup';
 import PopPupForm from '../components/PopPupForm';
 import {Helmet} from "react-helmet";
+import { useSelector } from "react-redux";
+
 
 
 export const DetailPage = () => {
+
+    const detailsDataFromRedux = useSelector((state) => state.DetailsDataSlice.objData);
 
   const { id } = useParams();
   const {pathname} = useLocation()
@@ -30,13 +34,13 @@ export const DetailPage = () => {
     }
   }, [id]);
 
+
   useEffect(()=>{
-    
-    if(urlPath === "gallery"){
-      getdetailsData("http://localhost:4000/api/gallery/", )
-    }else if(urlPath === "plans"){
-      getdetailsData("http://localhost:4000/api/plan/", )
-    }
+      if(urlPath === "gallery"){
+        getdetailsData("http://localhost:4000/api/gallery/", )
+      }else if(urlPath === "plans"){
+        getdetailsData("http://localhost:4000/api/plan/", )
+      }  
   },[getdetailsData, urlPath])
 
   if(!detailsData) return <div>Loading</div>

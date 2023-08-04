@@ -2,7 +2,6 @@ import FooterSection from "../components/FooterSection"
 import MobileNavBar from "../components/MobileNavBar"
 import {Helmet} from "react-helmet";
 
-
 const AboutPage = () => {
   return (
     <div>
