@@ -9,13 +9,9 @@ import axios from 'axios';
 import SharePopup from '../components/SharePopup';
 import PopPupForm from '../components/PopPupForm';
 import {Helmet} from "react-helmet";
-import { useSelector } from "react-redux";
-
 
 
 export const DetailPage = () => {
-
-    const detailsDataFromRedux = useSelector((state) => state.DetailsDataSlice.objData);
 
   const { id } = useParams();
   const {pathname} = useLocation()

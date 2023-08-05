@@ -4,12 +4,11 @@ import DownloadIcon from "../assets/DownloadIcon.svg"
 import { useNavigate, useLocation  } from "react-router-dom";
 import {useDispatch,  } from "react-redux";
 import { shareFormAction } from "../Redux/shareFormSlice";
-import { detailAction } from "../Redux/DetailsDataSlice";
 
 
 const CardList = ({cardsData}) => {
 
-    const nav = useNavigate()
+    const nav = useNavigate();
     const dispatch = useDispatch();
     const origin = window.location.origin
     const  {pathname}  = useLocation();
@@ -43,6 +42,7 @@ const CardList = ({cardsData}) => {
         dispatch(shareFormAction({formActive:true, url:shareUrl}));
     };
 
+
   return (
     <div className="headerContainer">
         <div className='CardList'>
@@ -51,10 +51,9 @@ const CardList = ({cardsData}) => {
                     <div className="CardListImg">
                         <img src={item?.imgLocations[0]?.img} alt={item?.imgLocations[0]?.alt}></img>
                         <div className="ShareIcon">
-                        {/* <a href="https://planmyspace2dplans.s3-ap-south-1.amazonaws.com/Alphanse-developer-resume.pdf" download>
-                            aaaa
-                        </a> */}
-                            <img src={DownloadIcon} alt="DownloadIcon"></img>
+                        <a href={item?.pdfLocation} download>
+                            <img src={DownloadIcon} alt="DownloadIcon" ></img>
+                        </a>
                             <img src={ShareIcon} alt="ShareIcon" onClick={()=>sharePopup(item?._id)}></img>
                         </div>
                     </div>

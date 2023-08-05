@@ -40,15 +40,15 @@ const SearchPage = () => {
 
   return (
     <div>
-      <Helmet>
+        <Helmet>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="theme-color" content="#000000" />
-          <meta name="description" content="Download free plans for architecture visualization, including home plans, elevation designs, interior designs, and 3D floor plans. Bring your dream project to life with our professional services." />
-          <meta name="keywords" content="free plans, architecture visualization, home plans, elevation designs, interior designs, 3D floor plans" />
-          <meta property="og:title" content="Download Free Plans for Architecture Visualization" />
-          <meta property="og:description" content="Download free plans for architecture visualization, including home plans, elevation designs, interior designs, and 3D floor plans. Bring your dream project to life with our professional services." />
-          <title>search page  my spaces.com</title>
-      </Helmet>
+          <meta name="description" content="Discover your perfect architectural design with our powerful search tool. Browse through a vast collection of home plans, elevation designs, interior designs, and 3D floor plans. Find the ideal plan that suits your requirements and bring your dream project to life with our professional services." />
+          <meta name="keywords" content="architectural design search, home plans, elevation designs, interior designs, 3D floor plans, find the perfect plan, professional services" />
+          <meta property="og:title" content="Architectural Design Search | Find Your Perfect Plan" />
+          <meta property="og:description" content="Discover your perfect architectural design with our powerful search tool. Browse through a vast collection of home plans, elevation designs, interior designs, and 3D floor plans. Find the ideal plan that suits your requirements and bring your dream project to life with our professional services." />
+          <title>Search Architectural Designs | Plan My Spaces</title>
+        </Helmet>
         <PcNavBar/>
         <CardList cardsData = {cardData}/>
         <SharePopup/>

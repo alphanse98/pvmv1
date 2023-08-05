@@ -10,6 +10,7 @@ import Gallery from "../components/Gallery"
 import PopPupForm from "../components/PopPupForm";
 import MobileNavBar from "../components/MobileNavBar";
 import {Helmet} from "react-helmet";
+import DownloadButton from "../components/DownloadButton";
 
 // import FileUploadComponent from "../components/FileUploadComponent";
 // import Upload from "../components/Upload";
@@ -27,6 +28,7 @@ function HomePage() {
           <title>plan my spaces.com</title>
       </Helmet>
         {/* <Upload/> */}
+        <DownloadButton/>
         <Header/>
         <Gallery/>
         <Services/> 
