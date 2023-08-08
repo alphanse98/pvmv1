@@ -1,50 +1,46 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useDispatch } from "react-redux";
 import { fromActiveAction } from "../Redux/Slice";
 
-const PostApi = ({ formData, setFormData, setLOader }) => {
+const PostApi = ({ formData, setFormData, setLoader }) => {
   const dispatch = useDispatch();
 
-  // response is ok then close the popup using setFromActive
-  // and clear form data and show toasting and close loading
-  const getResponse = () => {
+  const getResponse = useCallback(() => {
     dispatch(fromActiveAction(false));
     toast.success("done", {
       position: "top-right",
     });
     setFormData("");
-    setLOader(false)
-  };
+    setLoader(false);
+  }, [dispatch, setFormData, setLoader]);
 
-  // call handleClick for api post
-  const handleClick = async () => {
+  // Wrap handleClick with useCallback to maintain its reference
+  const handleClick = useCallback(async () => {
     try {
       const response = await axios.post(
-        // "https://pvm-rl1b.onrender.com/api/postusers",
         "http://localhost:4000/api/user",
         formData
       );
       getResponse(response.data);
     } catch (error) {
-      // if det error then close the popup using setFromActive
-      // and clear form data and show toasting and close loading
       console.log(error);
       toast.error("error", {
         position: "top-right",
       });
       dispatch(fromActiveAction(false));
       setFormData("");
-      setLOader(false)
+      // setLoader(false);
     }
-  };
+  }, [formData, dispatch, setFormData, getResponse]);
 
-  //call handleClick based on the formData state uptade
   useEffect(() => {
-    if (formData) handleClick();
-  }, [formData,]);
+    if (formData) {
+      handleClick();
+    }
+  }, [formData, handleClick]);
 
   return (
     <>

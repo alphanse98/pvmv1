@@ -14,7 +14,7 @@ const PopPupForm = () => {
   const fromActive = useSelector((state) => state.fromActiveStore.fromActive);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState();
-  const [loader, setLOader] = useState(false);
+  const [loader, setLoader] = useState(false);
 
   const uservalidation = Yup.object().shape({
     name: Yup.string().required("Name is required"),
@@ -48,7 +48,7 @@ const PopPupForm = () => {
               validationSchema={uservalidation}
               onSubmit={(param) => {
                 setFormData(param);
-                setLOader(true)
+                setLoader(true)
               }}
             >
               {({ errors, touched, values, setFieldValue, submitForm }) => (
@@ -101,7 +101,7 @@ const PopPupForm = () => {
                 </>
               )}
             </Formik>
-            <PostApi formData={formData} setFormData={setFormData} setLOader = {setLOader} />
+            <PostApi formData={formData} setFormData={setFormData} setLoader = {setLoader} />
             
           </div>
         </div>
