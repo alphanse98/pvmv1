@@ -8,10 +8,6 @@ import axios from 'axios';
 import SharePopup from '../components/SharePopup';
 import {Helmet} from "react-helmet";
 
-
-
-
-
 export const PlanPage = () => {
 
   const [planData, setPlanData]= useState([])

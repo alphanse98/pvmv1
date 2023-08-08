@@ -32,9 +32,9 @@ export const DetailPage = () => {
 
   useEffect(()=>{
       if(urlPath === "gallery"){
-        getdetailsData("http://localhost:4000/api/gallery/", )
+        getdetailsData("http://localhost:4000/api/gallery/",)
       }else if(urlPath === "plans"){
-        getdetailsData("http://localhost:4000/api/plan/", )
+        getdetailsData("http://localhost:4000/api/plan/",)
       }  
   },[getdetailsData, urlPath])
 
