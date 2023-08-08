@@ -73,12 +73,7 @@ function FooterSection() {
           <div className="FooterAbout" >
           <h1 className="FooterAboutHeading FooterHeadding fontFamily" id="About">About Us</h1>
           <p className="serviceFieldsParagraph FooterAboutParagraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            libero ante, semper a lacus non, vulputate cursus mauris. Lorem
-            ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Aliquam libero ante, semper a lacus non, vulputate
-            ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Aliquam libero ante, semper a lacus non, vulputate
+          Welcome to our Architecture Visualization service! We help you see your ideas come to life with stunning visualizations. Our skilled team specializes in plan elevation, interior design, and more. From start to finish, we pay attention to every detail. Impress your clients and elevate your projects with our exceptional services. Let us be your guide to success in the world of architecture and design. See the difference our visualization expertise can make!
           </p>
           <div>
             <div className='footerIconWraper'>

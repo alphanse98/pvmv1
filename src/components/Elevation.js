@@ -14,11 +14,7 @@ function Elevation() {
         <div className="serviceFields">
         <h1 className="serviceFieldsHeading fontFamily" id="Elevation">Elevation</h1>
           <p className="serviceFieldsParagraph oddParagraph">
-            The house elevation reflects the desired architectural style and lifestyle, be it modern, traditional, or contemporary.
-            Incorporating landscaping elements, such as trees, gardens, and pathways, enhances the overall integration with the surroundings.
-            Thoughtful selection of colors adds to the aesthetic appeal and cohesiveness of the house design.
-            A well-designed elevation prevents the risk of an unappealing appearance after construction.
-            By striving for visual harmony and considering the intended lifestyle, the house elevation plays a crucial role in achieving an attractive and inviting final outcome.
+          Welcome to our house elevation service! We specialize in creating captivating and functional exterior designs that reflect your preferred style while harmonizing with the surroundings. Our expert team ensures personalized solutions, compliance with regulations, and meticulous planning for a seamless construction process. Elevate the value and appeal of your property with our thoughtful and aesthetically pleasing elevation designs. Prices start from 1999 .
           </p>
           <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
         </div>

@@ -16,17 +16,7 @@ function FloorPlan() {
         <h1 className="serviceFieldsHeading fontFamily" id="3Dplan">3D Floor Plan</h1>
 
           <p className="serviceFieldsParagraph">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            libero ante, semper a lacus non, vulputate cursus mauris. Lorem
-            ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Aliquam libero ante, semper a lacus non, vulputate
-            cursus mauris. Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit. Aliquam libero ante, semper a
-            lacus non, vulputate cursus mauris. Lorem ipsum dolor sit amet Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero
-            ante, semper a lacus non, vulputate cursus mauris. Lorem ipsum dolor
-            sit amet
-          </p>
+          Welcome to our exceptional 3D floor plan service! We take pride in offering expertly crafted floor plans that bring your vision to life with creativity and precision. Our team ensures accurate and detailed representations of your space, allowing you to visualize the design effectively.  Contact us now to transform your ideas into stunning 3D floor plans and elevate your project to new heights of excellence and innovation. Prices start from $1999.         </p>
           <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
         </div>
         <div className="serviceFieldsImgBOx">

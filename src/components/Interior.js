@@ -12,16 +12,7 @@ function Interior() {
           <div className="serviceFields">
           <h1 className="serviceFieldsHeading fontFamily" id="Interior">Interior</h1>
             <p className="serviceFieldsParagraph oddParagraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              libero ante, semper a lacus non, vulputate cursus mauris. Lorem
-              ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit. Aliquam libero ante, semper a lacus non, vulputate
-              cursus mauris. Lorem ipsum dolor sit amet Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Aliquam libero ante, semper a
-              lacus non, vulputate cursus mauris. Lorem ipsum dolor sit amet Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Aliquam libero
-              ante, semper a lacus non, vulputate cursus mauris. Lorem ipsum dolor
-              sit amet
+            Welcome to our interior design service! We specialize in creating captivating and functional interior designs that reflect your preferred style while harmonizing with your space. Our expert team ensures personalized solutions, attention to detail, and meticulous planning for a seamless transformation process. Elevate the ambiance and appeal of your property with our thoughtful and aesthetically pleasing interior designs. Prices start from 1999 .
             </p>
             <button className='HeaderDownloadBtn btnCetnre' onClick={()=>navigation("/gallery")}>View More</button>
           </div>

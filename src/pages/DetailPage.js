@@ -3,7 +3,6 @@ import Details from "../components/Details"
 import CardList from "../components/CardList"
 import FooterSection from "../components/FooterSection"
 import MobileNavBar from '../components/MobileNavBar'
-// import { useSelector } from "react-redux";
 import { useLocation, useParams } from 'react-router-dom';
 import axios from 'axios';
 import SharePopup from '../components/SharePopup';
