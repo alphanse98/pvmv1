@@ -1029,8 +1029,8 @@ margin-top: 10px;
 }
 .detailIcons{
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
 }
 .detailIcon{
   width: 1.7rem;
