@@ -18,8 +18,8 @@ const GalleryPage = () => {
 
   const getGalleryData = async ()=>{
     try {
-      const res = await axios.get("http://localhost:4000/api/gallery")
-      // const res = await axios.get("https://plantest.onrender.com/api/gallery")
+      // const res = await axios.get("http://localhost:4000/api/gallery")
+      const res = await axios.get("http://www.planmydesign.com:4000/api/gallery")
       setGalleryData(res?.data) 
     } catch (error) {
       console.log("error",error)

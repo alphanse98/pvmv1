@@ -32,9 +32,11 @@ const SearchPage = () => {
   useEffect(()=>{
     let searchData = searchParams.get("search") 
     if(urlPathOne === "plans"){
-      getSeachData("http://localhost:4000/api/plan/search/"+searchData)
+      getSeachData("http://www.planmydesign.com:4000/api/plan/search/"+searchData)
+      // getSeachData("http://localhost:4000/api/plan/search/"+searchData)
     }else if(urlPathOne ==="gallery"){
-      getSeachData("http://localhost:4000/api/gallery/search/"+searchData)
+      getSeachData("http://www.planmydesign.com:4000/api/gallery/search/"+searchData)
+      // getSeachData("http://localhost:4000/api/gallery/search/"+searchData)
     }
   },[searchParams, urlPathOne])
 

@@ -21,8 +21,10 @@ const PostApi = ({ formData, setFormData, setLoader }) => {
   const handleClick = useCallback(async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/user",
+        "http://www.planmydesign.com:4000/api/user",
+        // "http://localhost:4000/api/user",
         formData
+        // formData
       );
       getResponse(response.data);
     } catch (error) {

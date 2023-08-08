@@ -13,7 +13,7 @@ import { BarLoader } from 'react-spinners';
  
 function FooterSection() {
   const [formData, setFormData] = useState()
-  const [loader, setLOader] = useState(false);
+  const [loader, setLoader] = useState(false);
 
 
 
@@ -33,7 +33,7 @@ function FooterSection() {
   const handleSubmit = (param, { resetForm }) => {
     // Form submission logic...
     setFormData(param)
-    setLOader(true)
+    setLoader(true)
     // Reset the form fields
     resetForm();
   };
@@ -93,7 +93,7 @@ function FooterSection() {
       </div>
       )}
       </Formik>
-      <PostApi formData={formData} setFormData={setFormData} setLOader = {setLOader} />
+      <PostApi formData={formData} setFormData={setFormData} setLoader = {setLoader} />
     </footer>
   );
 }
