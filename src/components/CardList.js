@@ -21,7 +21,7 @@ const CardList = ({cardsData}) => {
     // urlPathOne = gallery
     // urlPathTwo = detail
 
-    // (line 31) if use in detail page replace the id only
+    // (line 31) if use in detail page replace the id only l
     // (line 33) if use in search page replace replace 
     // full url like search to detail for switch the page searchPage to detailPage
     // (line 35) if use in plan page or plan gallery  update url like detail path and id 
