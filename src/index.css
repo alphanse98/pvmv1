@@ -653,7 +653,7 @@ display: flex;}
  }
  .sevixeBoxP{
   margin-top: 13px;
-  font-size: .8rem;
+  font-size: .9rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #2A2031;
@@ -662,6 +662,20 @@ display: flex;}
   width: 150px;
   height: 150px;
   border-radius: 10px;
+}
+.priceBox{
+  margin: 10px 0px;
+}
+.priceBox{
+  font-size: .8rem;
+}
+.priceBox > s{
+  color: rgb(194, 65, 65);
+}
+.priceBox > span{
+  color: #269CDD;
+  font-weight: 500;
+  margin-left: 10px;
 }
  @media (min-width: 600px) {
   .serviceBox{
