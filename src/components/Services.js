@@ -11,7 +11,7 @@ function Services() {
             <hi className="serviceHeading fontFamily" id="Services">Services</hi> 
             <div className="serviceBoxs">
                 <a className="serviceBox" href="#plan">
-                    <img src={plan} className='serviceBoxIcon' alt=''></img>
+                    <img src= {require("../assets/elevation1.jpeg")} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>2D Plan</p>
                 </a>
                 <a className="serviceBox" href="#Elevation">
