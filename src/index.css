@@ -77,6 +77,9 @@ html{
   margin-bottom: 2rem;
   height: 50px;
 }
+.popupSubmitBnt{
+  margin-top: 10px;
+}
 
 .shrePopUpIcons{
   width: 100%;

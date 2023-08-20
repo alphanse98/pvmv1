@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useDispatch, useSelector } from "react-redux";
 import closeIcon from "../assets/Close.svg";
 import fbShareIcon from "../assets/fbShare.svg"
@@ -9,16 +9,19 @@ import { shareFormAction } from "../Redux/shareFormSlice";
 
 const SharePopup = () => {
 
+    const [copy, SetCopy] = useState("Copy")
     const {formActive, url} = useSelector((state) => state.shareFormSlice.formActive);
     const dispatch = useDispatch();
 
     const handlePopupClose = () => {
       dispatch(shareFormAction({formActive:false, url:''}));
+      SetCopy("Copy")
     };
   
     const copyUrl = ()=>{
       // Copy the text inside the text field
        navigator.clipboard.writeText(url);
+       SetCopy("Copied ")
     }
 
   return (
@@ -42,7 +45,7 @@ const SharePopup = () => {
             <p className='copyLing fontFamily'>or copy link</p>
             <div className='shareLingBox'>
                 <p className='lingText fontFamily'>{url}</p>
-                <button className='HeaderDownloadBtn' onClick={()=>copyUrl()}>Copy</button>
+                <button className='HeaderDownloadBtn' onClick={()=>copyUrl()}>{copy}</button>
             </div>
             </div>
         </div>

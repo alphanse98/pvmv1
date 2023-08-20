@@ -35,7 +35,7 @@ const PopPupForm = () => {
         src={poppupicon}
         className="popupicon"
         onClick={() => dispatch(fromActiveAction(true))}
-        alt="im"
+        alt="popupicon"
       ></img>
       {/* form popup */}
       {fromActive && (
@@ -96,7 +96,7 @@ const PopPupForm = () => {
                   ></textarea> */}
 
                   {loader? <BarLoader color="#269CDD" className="HeaderDownloadBtn "/> :
-                  <button className="HeaderDownloadBtn " onClick={submitForm}>
+                  <button className="HeaderDownloadBtn popupSubmitBnt" onClick={submitForm}>
                   Submit
                   </button> }  
                 </>
