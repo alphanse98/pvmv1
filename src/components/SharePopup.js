@@ -25,8 +25,8 @@ const SharePopup = () => {
     <div>
         {/* Share form popup */}
       {formActive && 
-        <div className="fromActive">
-            <div className='formBox shareBox'> 
+        <div className="fromActive" onClick={handlePopupClose}>
+            <div className='formBox shareBox'  onClick={(event) => event.stopPropagation()}> 
             {/* close icon*/}
             <img src={closeIcon} className="closeIcon"  onClick={handlePopupClose} alt="closeIcon"></img>
             <p className=' shareHeading serviceHeading fontFamily'>Share Link</p>

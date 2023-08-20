@@ -27,7 +27,7 @@ const PopPupForm = () => {
   });
 
   const userData = { name: "", mobile: "", email: "", Description: "" };
-
+  
   return (
     <div>
       {/* poppup icon */}
@@ -39,9 +39,10 @@ const PopPupForm = () => {
       ></img>
       {/* form popup */}
       {fromActive && (
-        <div className="fromActive">
-          <div className="formBox">
-           { !loader && <img src={closeIcon} className="closeIcon" onClick={() => dispatch(fromActiveAction(false))} alt=""></img>}
+        <div className="fromActive"  onClick={()=>dispatch(fromActiveAction(false)) }>
+          {/* spot event bubbling */}
+          <div className="formBox" onClick={(event) => event.stopPropagation()}>
+           { !loader && <img src={closeIcon} className="closeIcon" onClick={()=>dispatch(fromActiveAction(false)) } alt="closeIcon"></img>}
             <p className="serviceHeading fontFamily">Contact Now !</p>
             <Formik
               initialValues={userData}

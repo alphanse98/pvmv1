@@ -1,7 +1,4 @@
-import plan from '../assets/mdi_floor-plan.svg'
-import elevation from '../assets/ElevationIcon.svg'
-import Interior from '../assets/interiorIcon.svg'
-import WalkTrough from '../assets/ph_video.svg'
+
 
 
 function Services() {
@@ -22,19 +19,19 @@ function Services() {
 
                 </a>
                 <a className="serviceBox" href="#Interior">
-                    <img src={Interior} className='serviceBoxIcon' alt=''></img>
+                    <img src= {require("../assets/elevation2.jpeg")} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>Interior</p>
                     <p className='priceBox'><s className='fontFamily priceBox'>Rs.5000</s><span className='fontFamily priceBox'>Rs.1999</span></p>
 
                 </a>
                 <a className="serviceBox" href="#3Dplan">
-                    <img src={plan} className='serviceBoxIcon' alt=''></img>
+                    <img src= {require("../assets/elevation2.jpeg")} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>3D Plan</p>
                     <p className='priceBox'><s className='fontFamily priceBox'>Rs.3000</s><span className='fontFamily priceBox'>Rs.1500</span></p>
 
                 </a>
                 <a className="serviceBox" href='#WalkTrough'>
-                    <img src={WalkTrough} className='serviceBoxIcon' alt=''></img>
+                    <img src= {require("../assets/elevation2.jpeg")} className='serviceBoxIcon' alt=''></img>
                     <p className='sevixeBoxP '>Walk Trough</p>
                     <p className='priceBox'><s className='fontFamily priceBox'>Rs.4000</s><span className='fontFamily priceBox'>Rs.1999</span></p>
 

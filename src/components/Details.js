@@ -31,6 +31,7 @@ const Details = ({detailsData}) => {
         dispatch(shareFormAction({formActive:true, url:shareUrl}));
     };
 
+   
   return (
     <div className='detailsCom'>
         <div className='details'>

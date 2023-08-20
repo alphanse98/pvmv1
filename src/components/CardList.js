@@ -46,8 +46,8 @@ const CardList = ({cardsData}) => {
   return (
     <div className="headerContainer">
         <div className='CardList'>
-            {cardsData?.map((item, index) => (
-                <div className='CardListCard' key={index}>
+            {cardsData?.map((item) => (
+                <div className='CardListCard' key={item?._id}>
                     <div className="CardListImg">
                         <img src={item?.imgLocations[0]?.img} alt={item?.imgLocations[0]?.alt}></img>
                         <div className="ShareIcon">
