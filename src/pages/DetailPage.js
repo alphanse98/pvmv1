@@ -17,6 +17,8 @@ export const DetailPage = () => {
   const urlPath = pathname.split("/")[1]
   const [detailsData, setDetailsData] = useState();
   const [cardsData, setCardsData] = useState([]);
+  const[loader, setLoader] = useState(true);
+
 
   const getdetailsData = useCallback(async (apiById) => {
     try {
@@ -24,6 +26,7 @@ export const DetailPage = () => {
       setDetailsData(res?.data);
       const resCards = await axios.get(apiById);
       setCardsData(resCards?.data);
+      setLoader(false)
     } catch (error) {
       console.log(error);
     }
@@ -38,21 +41,21 @@ export const DetailPage = () => {
       }  
   },[getdetailsData, urlPath])
 
-  if(!detailsData) return <div>Loading</div>
+  if(!detailsData) return <div className="cardListLoader fontFamily"><p>Loading.....</p></div>
 
   return (
     <div>
-        <Helmet>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="theme-color" content="#000000" />
-          <meta name="description" content= {detailsData?.seoDiscription} />
-          <meta name="keywords" content= {detailsData?.seoKeyWords} />
-          <meta property="og:title" content="Download Free Plans for Architecture Visualization" />
-          <meta property="og:description" content="Download free plans for architecture visualization, including home plans, elevation designs, interior designs, and 3D floor plans. Bring your dream project to life with our professional services." />
-          <title>{detailsData?.seoTitle} </title>
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content= {detailsData?.seoDiscription} />
+        <meta name="keywords" content= {detailsData?.seoKeyWords} />
+        <meta property="og:title" content="Download Free Plans for Architecture Visualization" />
+        <meta property="og:description" content="Download free plans for architecture visualization, including home plans, elevation designs, interior designs, and 3D floor plans. Bring your dream project to life with our professional services." />
+        <title>{detailsData?.seoTitle} </title>
       </Helmet>
       <Details detailsData ={detailsData} />
-      <CardList cardsData ={cardsData}/>
+      <CardList cardsData ={cardsData} loader ={loader}/>
       <SharePopup/>
       <PopPupForm/>
       <MobileNavBar/>

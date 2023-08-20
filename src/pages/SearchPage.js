@@ -13,6 +13,7 @@ import {Helmet} from "react-helmet";
 const SearchPage = () => {
   const [searchParams, ] = useSearchParams();
   const [cardData, setCardData] = useState([]);
+  const[loader, setLoader] = useState(true);
   const pathname = window.location.pathname
   const urlPathOne = pathname.split("/")[1]
 
@@ -20,6 +21,7 @@ const SearchPage = () => {
     try{
         const res = await axios.get(apiUrl)
         setCardData(res.data)
+        setLoader(false)
         }catch(error){
         console.log("error",error)
       }
@@ -51,8 +53,9 @@ const SearchPage = () => {
           <meta property="og:description" content="Discover your perfect architectural design with our powerful search tool. Browse through a vast collection of home plans, elevation designs, interior designs, and 3D floor plans. Find the ideal plan that suits your requirements and bring your dream project to life with our professional services." />
           <title>Search Architectural Designs | Plan My Spaces</title>
         </Helmet>
+
         <PcNavBar/>
-        <CardList cardsData = {cardData}/>
+        <CardList cardsData = {cardData} loader= {loader}/>
         <SharePopup/>
         <PopPupForm/>
         <MobileNavBar/>

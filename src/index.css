@@ -192,6 +192,15 @@ html{
   display: none;
   width: 50%;
 }
+.cardListLoader{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  color: #6b6b6b;
+  font-size: 1.5rem;
+}
 .CardListSearchInput{
   display: flex;
   width: 100%;

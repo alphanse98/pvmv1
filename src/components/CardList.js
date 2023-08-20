@@ -6,7 +6,7 @@ import {useDispatch,  } from "react-redux";
 import { shareFormAction } from "../Redux/shareFormSlice";
 
 
-const CardList = ({cardsData}) => {
+const CardList = ({cardsData, loader}) => {
 
     const nav = useNavigate();
     const dispatch = useDispatch();
@@ -46,6 +46,8 @@ const CardList = ({cardsData}) => {
   return (
     <div className="headerContainer">
         <div className='CardList'>
+            {loader && <div className="cardListLoader fontFamily"><p>Loading.....</p></div>}
+            {!loader && cardsData.length === 0 && <div className="cardListLoader fontFamily"><p>No Data Found</p></div>}
             {cardsData?.map((item) => (
                 <div className='CardListCard' key={item?._id}>
                     <div className="CardListImg">

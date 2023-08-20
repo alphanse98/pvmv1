@@ -12,7 +12,8 @@ import {Helmet} from "react-helmet";
 
 const GalleryPage = () => {
 
-  const [galleryData, setGalleryData]= useState([])
+  const [galleryData, setGalleryData]= useState([]);
+  const[loader, setLoader] = useState(true)
 
   
 
@@ -21,6 +22,7 @@ const GalleryPage = () => {
       // const res = await axios.get("http://localhost:4000/api/gallery")
       const res = await axios.get("http://www.planmydesign.com:4000/api/gallery")
       setGalleryData(res?.data) 
+      setLoader(false)
     } catch (error) {
       console.log("error",error)
     }
@@ -42,7 +44,7 @@ const GalleryPage = () => {
         <title>Free Home designs download | Plan My Spaces.com</title>
       </Helmet>
       <PcNavBar/>
-      <CardList  cardsData = {galleryData} />
+      <CardList  cardsData = {galleryData} loader={loader} />
       <PopPupForm/>
       <MobileNavBar/>
       <FooterSection/>
