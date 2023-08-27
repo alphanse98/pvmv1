@@ -35,9 +35,9 @@ export const DetailPage = () => {
 
   useEffect(()=>{
       if(urlPath === "gallery"){
-        getdetailsData("http://www.planmydesign.com:4000/api/gallery/",)
+        getdetailsData("https://api.planmydesign.com/api/gallery/",)
       }else if(urlPath === "plans"){
-        getdetailsData("http://www.planmydesign.com:4000/api/plan/",)
+        getdetailsData("https://api.planmydesign.com/api/plan/",)
       }  
   },[getdetailsData, urlPath])
 

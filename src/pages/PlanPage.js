@@ -16,7 +16,7 @@ export const PlanPage = () => {
   const getGalleryData = async ()=>{
     try {
       // const res = await axios.get("http://localhost:4000/api/plan") 
-      const res = await axios.get("http://www.planmydesign.com:4000/api/plan")
+      const res = await axios.get("https://api.planmydesign.com/api/plan")
       setPlanData(res?.data) 
       setLoader(false)
     } catch (error) {
