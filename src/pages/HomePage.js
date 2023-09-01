@@ -25,7 +25,7 @@ function HomePage() {
           <meta name="keywords" content="free plans, architecture visualization, home plans, elevation designs, interior designs, 3D floor plans" />
           <meta property="og:title" content="Download Free Plans for Architecture Visualization" />
           <meta property="og:description" content="Download free plans for architecture visualization, including home plans, elevation designs, interior designs, and 3D floor plans. Bring your dream project to life with our professional services." />
-          <title>plan my design .com</title>
+          <title>PlanMyDesign.com</title>
       </Helmet>
         {/* <Upload/> */}
         <Header/>

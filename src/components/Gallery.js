@@ -10,21 +10,21 @@ const Gallery = () => {
       <hi className="serviceHeading fontFamily"  id="Gallery" >Gallery</hi> 
         <div className='img-sliders'>
             <div className='img-slide'>
-                <img src={require('../assets/floor plan1.jpeg')} alt='My' ></img>
+                <img src={require('../assets/floor plan1.png')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation1.jpeg')} alt='My' ></img>
                 <img src={require('../assets/elevation2.jpeg')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation2.jpeg')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation3.jpeg')} alt='My' ></img>
             </div>
             <div className='img-slide'>
-                <img src={require('../assets/floor plan1.jpeg')} alt='My' ></img>
+                <img src={require('../assets/floor plan1.png')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation1.jpeg')} alt='My' ></img>
                 <img src={require('../assets/elevation2.jpeg')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation2.jpeg')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation3.jpeg')} alt='My' ></img>
             </div>
             <div className='img-slide'>
-                <img src={require('../assets/floor plan1.jpeg')} alt='My' ></img>
+                <img src={require('../assets/floor plan1.png')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation1.jpeg')} alt='My' ></img>
                 <img src={require('../assets/elevation2.jpeg')} alt='My' ></img>
                 <img src={require('../assets/GalleryImgs/elevation2.jpeg')} alt='My' ></img>

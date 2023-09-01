@@ -166,3 +166,36 @@ const Upload = () => {
 }
 
 export default Upload;
+
+
+// 248
+// 262
+// 274
+
+
+// {
+//     "heading": "5BHK Elevation",
+//     "content" : "",
+//     "dimension": "40'X50'",
+//     "area": "2000 Sqft",
+//     "facing": "East",
+//     "vasthu": "Yes",
+//     "details": [
+//         "simple  Elevation design",
+//         "Car Parking",
+//         "2 Floor"
+//     ],
+//     "filter": "elevation",
+//     "isActive": false,
+//     "premium": false,
+//     "imgLocations": [
+//         {
+//             "img": "https://planmyspace2dplans.s3.ap-south-1.amazonaws.com/WhatsApp+Image+2022-02-01+at+3.18.25+PM+(3).jpeg",
+//             "alt": "5BHK Elevation "
+//         }
+//     ],
+//     "pdfLocation": "https://planmyspace2dplans.s3.ap-south-1.amazonaws.com/34.jpeg",
+//     "seoTitle": "5BHK Elevation| PlanMyDesign.com",
+//     "seoKeyWords": "47'X40' plan",
+//     "seoDescription": "47'X40'  plan free download"
+// }
