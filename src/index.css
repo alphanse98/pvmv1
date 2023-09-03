@@ -303,8 +303,8 @@ html{
   background-color: #269CDD;
   border-style: none;
   color: white;
-  font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Roboto', sans-serif; */
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Roboto', sans-serif;
   border-radius: 5px;
   font-size: 12px;
   font-weight: 500;
@@ -378,7 +378,10 @@ html{
     margin: 0% auto;
   }
   .CardListSearchInput{
-    width: 50%;
+    width: 380px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 40px;
   }
   .searchIconImg{
     display: none;
@@ -633,6 +636,13 @@ display: flex;}
 
   }
 }
+@media (min-width: 1600px) {
+  .img-slide img{
+    width: 16rem;
+    height: 16rem;
+
+  }
+}
 
  /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
  /* service section */
@@ -733,6 +743,13 @@ display: flex;}
     width: 13rem;
     height: 13rem;
   }
+ }
+ @media (min-width: 1600px) {
+  .serviceBoxIcon{
+    width: 16rem;
+    height: 16rem;
+  }
+
  }
  /* = = = = = = = = = = = = =   = = = = = = = = = = = = = = = = = = = =  */
 .serviceFields{

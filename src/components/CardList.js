@@ -53,9 +53,10 @@ const CardList = ({cardsData, loader}) => {
                     <div className="CardListImg">
                         <img src={item?.imgLocations[0]?.img} alt={item?.imgLocations[0]?.alt}></img>
                         <div className="ShareIcon">
-                        <a href={item?.pdfLocation} download>
+                        {/* <a href={item?.pdfLocation} download> */}
+                        
                             <img src={DownloadIcon} alt="DownloadIcon" ></img>
-                        </a>
+                     
                             <img src={ShareIcon} alt="ShareIcon" onClick={()=>sharePopup(item?._id)}></img>
                         </div>
                     </div>

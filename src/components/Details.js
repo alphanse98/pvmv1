@@ -33,7 +33,7 @@ const Details = ({detailsData}) => {
 
    
   return (
-    <div className='detailsCom'>
+    <div className=''>
         <div className='details'>
             {/* flex box one */}
             <div className='detailsBoxOne'>
