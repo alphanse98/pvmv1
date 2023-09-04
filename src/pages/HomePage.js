@@ -27,7 +27,6 @@ function HomePage() {
           <meta property="og:description" content="Download free plans for architecture visualization, including home plans, elevation designs, interior designs, and 3D floor plans. Bring your dream project to life with our professional services." />
           <title>PlanMyDesign.com</title>
       </Helmet>
-        {/* <Upload/> */}
         <Header/>
         <Gallery/>
         <Services/> 
@@ -37,7 +36,6 @@ function HomePage() {
         <Interior/>
         <WalkThrough/>
         <FooterSection/>
-        {/* comman componetns */}
         <PopPupForm/>
         <MobileNavBar/>
       </div>

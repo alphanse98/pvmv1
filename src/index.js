@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Reset.css';
-import './index.css';
+import './css/Reset.css';
+import './css/index.css';
 import { store } from "./Redux/Store";
 import { Provider } from "react-redux";
 import Routing from './route/Routing';
